@@ -82,3 +82,6 @@ gem "mini_magick"
 gem "rmagick"     
 gem 'unf' 
 
+#enable all platform features
+gem 'rails_12factor'
+
