@@ -1,0 +1,24 @@
+* {
+	margin: 0;
+}
+html, body {
+	height: 100%;
+}
+
+#wrap {
+min-height: 100%;
+height: auto !important;
+margin: 0 auto -60px;
+}
+
+
+.muted {
+color: #999999;
+}
+
+#push, #footer {
+height: 60px;
+}
+
+
+

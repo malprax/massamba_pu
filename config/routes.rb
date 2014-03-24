@@ -1,13 +1,12 @@
-MassambaPu::Application.routes.draw do
-  resources :pages
-  #get '/pages' => 'page#index'
+MassambaPu::Application.routes.draw do  #get '/pages' => 'page#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+  resources :pages
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-  root 'pages#index'
+  root 'home#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

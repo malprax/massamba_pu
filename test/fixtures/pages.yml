@@ -4,8 +4,10 @@ one:
   name: MyString
   content: MyText
   permalink: MyString
+  picture_id: 1
 
 two:
   name: MyString
   content: MyText
   permalink: MyString
+  picture_id: 1
