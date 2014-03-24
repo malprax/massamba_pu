@@ -9,6 +9,7 @@
                         <h1>
                             <a class="brand" href="index.html">Dinas Pekerjaan Umum</a>
                         </h1>
+                       
                         <div class="nav-collapse collapse">
                             <ul class="nav pull-right">
                                 <!-- Home -->
@@ -89,50 +90,8 @@
                                     </li>                   
                                   </ul>
                                 </li>
-                                <li>
-                                  <form class="navbar-search pull-left">
-                                    <input type="text" class="search-query" placeholder="Search">
-                                  </form>
-                                </li>
-                                <!--  -->
                                
-                                <!-- <%# if user_signed_in? %>
-                                
-                                  
-                                <!About -->
-                                <li class="dropdown" >
-                                  <a class="dropdown-toggle"
-                                     data-toggle="dropdown"
-                                     href="#">
-                                      <i class="icon-user"></i>                                  
-                                    </a>
-                                  <ul class="dropdown-menu"role="menu" aria-labelledby="dropdownMenu">                                      
-                                   
-                                    <%# if can? :manage, @pages %>
-                                     <li> <%#= link_to 'Mailbox', messages_path%> </li> 
-                                    <li> <%#= link_to 'Page', pages_path %> </li> 
-                                    
-                                    <li> <%#= link_to "Cpanel", "http://euly.dnsbit.net/cpanel" %></li>
-                                    <%# end %>
-                                    
-                                    
-                                    <li> <%#= link_to "Webmail", "http://webmail.runiah-school.com" %>  </li> 
-                                                  
-                                    <li> <%#=link_to 'Sign Out'.html_safe,  destroy_user_session_path, method: :delete, title: "Sign Out", data: {tooltip: true}%></li> 
-                                                              
-                                  </ul>
-                                </li>
-                                <!--  -->
-                                     
-                                    
-                               
-                                <%# else %>
-                                <li>
-                                     <%#=link_to 'Sign In'.html_safe,  new_user_session_path,  title: "Sign In", data: {tooltip: true}%>
-                                </li>
-                                
-                                <%# end %>  
-                                
+                                <!--  -->    
                          
                             </ul>
                         </div>
