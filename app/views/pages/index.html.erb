@@ -7,8 +7,8 @@
         <table class="table">
           <thead>
             <tr>
-              <th>ID</th>
-              <th>Name</th>              
+              <th>Id</th>
+              <th>Nama</th>              
               <th></th>
               <th></th>
               
@@ -19,18 +19,15 @@
             <% @pages.each do |page| %>
               <tr>
                 <td><%= page.id %></td>
-                <td><%= link_to page.name, page %></td>                
-                <td><%= link_to 'Show', page %></td>
-                <td><%= link_to 'Edit', edit_page_path(page) %></td>              
+                <td><%= link_to page.name, page %></td>                        
               </tr>
             <% end %>
           </tbody>
         </table>
 
         <br>
-
-        <%= link_to 'New Page', new_page_path %>
-        
+        <%= link_to 'Buat Halaman', new_page_path %>
+        <div class="push"></div>
       </div>
     </div>
   </div>
