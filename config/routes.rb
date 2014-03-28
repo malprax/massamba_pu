@@ -14,27 +14,26 @@ MassambaPu::Application.routes.draw do  #get '/pages' => 'page#index'
  get '/struktur_organisasi' => 'pages#show', :defaults => { :id => '3' }
  get '/tugas_pokok_dan_fungsi' => 'pages#show', :defaults => { :id => '4' }
  get '/visi_dan_misi' => 'pages#show', :defaults => { :id => '5' }
- get '/pegawai' => 'pages#show', :defaults => { :id => '20' }
+ get '/pegawai' => 'pages#show', :defaults => { :id => '6' }
  
  # Berita
   get '/berita_dpu' => 'pages#show', :defaults => { :id => '6' }
-  get '/sekilas_info' => 'pages#show', :defaults => { :id => '7' }
-  get '/siaran_pers' => 'pages#show', :defaults => { :id => '8' }
+  get '/sekilas_info' => 'pages#show', :defaults => { :id => '7' }  
   get '/suara_rakyat' => 'pages#show', :defaults => { :id => '9' }
   
-  # Info
-  get '/perijinan_dan_pelayanan' => 'pages#show', :defaults => { :id => '10' }
-  get '/produk_data' => 'pages#show', :defaults => { :id => '11' }
-  get '/produk_hukum_dan_kebijakan' => 'pages#show', :defaults => { :id => '12' }
+  # Info  
+  get '/produk_data' => 'pages#show', :defaults => { :id => '11' } 
   get '/program_dan_anggaran' => 'pages#show', :defaults => { :id => '13' }
   get '/proyek_strategis' => 'pages#show', :defaults => { :id => '14' }
   
-  # Jalanan
-  get '/prasarana_jaringan_utilitas' => 'pages#show', :defaults => { :id => '15' }
-  get '/sekretariat' => 'pages#show', :defaults => { :id => '16' }
-  get '/sumber_daya_air' => 'pages#show', :defaults => { :id => '17' }
-  get '/unit_pelaksana_teknis' => 'pages#show', :defaults => { :id => '18' }
-  get '/unit_pengelola' => 'pages#show', :defaults => { :id => '19' }
+  # Unit Kerja 
+  get '/sekretariat' => 'pages#show', :defaults => { :id => '13' }
+  get '/bina_marga' => 'pages#show', :defaults => { :id => '14' }
+  get '/cipta_karya' => 'pages#show', :defaults => { :id => '15' }
+  get '/penataan_ruang' => 'pages#show', :defaults => { :id => '16' }
+  get '/kebersihan' => 'pages#show', :defaults => { :id => '17' }
+  get '/pengairan' => 'pages#show', :defaults => { :id => '18' }
+  get '/uptd' => 'pages#show', :defaults => {:id => '19'}
  # get '/sambutan_kepala_dinas' => 'pages#show', as: :our_philosophy
 #  get '/sejarah' => 'pages#show'
 #  get '/struktur_organisasi' => 'pages#show'
