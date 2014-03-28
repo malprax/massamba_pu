@@ -14,6 +14,7 @@ MassambaPu::Application.routes.draw do  #get '/pages' => 'page#index'
  get '/struktur_organisasi' => 'pages#show', :defaults => { :id => '3' }
  get '/tugas_pokok_dan_fungsi' => 'pages#show', :defaults => { :id => '4' }
  get '/visi_dan_misi' => 'pages#show', :defaults => { :id => '5' }
+ get '/pegawai' => 'pages#show', :defaults => { :id => '20' }
  
  # Berita
   get '/berita_dpu' => 'pages#show', :defaults => { :id => '6' }
