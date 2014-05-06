@@ -84,9 +84,8 @@
                                 </li>
                                 
                                    
-                                <% if user_signed_in? %>
-        
-                                <li > <%= link_to current_user.email, root_url %> </li>
+                                <% if user_signed_in? %>       
+                              
                                 <li >
                                     <%= link_to 'Edit Profil', edit_user_registration_path %>                        
                                 <li>

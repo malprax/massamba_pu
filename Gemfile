@@ -51,6 +51,16 @@ end
 #user_authentication
 gem 'devise'
 
+#upgrade from rails3
+gem 'protected_attributes'
+gem 'rails-observers'
+gem 'actionpack-page_caching'
+gem 'actionpack-action_caching'
+gem 'activerecord-deprecated_finders'
+gem 'builder'
+gem 'minitest'
+gem 'tzinfo'
+
 #twitter_bootstrap
 gem "therubyracer", platforms: :ruby
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS

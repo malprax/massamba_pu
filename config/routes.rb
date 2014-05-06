@@ -60,7 +60,10 @@ MassambaPu::Application.routes.draw do  #get '/pages' => 'page#index'
   #       get 'sold'
   #     end
   #   end
-
+  
+  # devise_for :views
+  devise_for :users
+  
   # Example resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales
