@@ -1,0 +1,2 @@
+module SuaraRakyatsHelper
+end

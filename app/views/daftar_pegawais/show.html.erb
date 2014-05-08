@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @daftar_pegawai.name %>
+</p>
+
+<p>
+  <strong>Nip:</strong>
+  <%= @daftar_pegawai.nip %>
+</p>
+
+<p>
+  <strong>Pangkat:</strong>
+  <%= @daftar_pegawai.pangkat_id %>
+</p>
+
+<p>
+  <strong>Golongan pangkat:</strong>
+  <%= @daftar_pegawai.golongan_pangkat %>
+</p>
+
+<p>
+  <strong>Jabatan:</strong>
+  <%= @daftar_pegawai.jabatan_id %>
+</p>
+
+<%= link_to 'Edit', edit_daftar_pegawai_path(@daftar_pegawai) %> |
+<%= link_to 'Back', daftar_pegawais_path %>

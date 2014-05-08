@@ -1,0 +1,37 @@
+<%= form_for(@daftar_pegawai) do |f| %>
+  <% if @daftar_pegawai.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@daftar_pegawai.errors.count, "error") %> prohibited this daftar_pegawai from being saved:</h2>
+
+      <ul>
+      <% @daftar_pegawai.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :nip %><br>
+    <%= f.number_field :nip %>
+  </div>
+  <div class="field">
+    <%= f.label :pangkat_id %><br>
+    <%= f.text_field :pangkat_id %>
+  </div>
+  <div class="field">
+    <%= f.label :golongan_pangkat %><br>
+    <%= f.text_field :golongan_pangkat %>
+  </div>
+  <div class="field">
+    <%= f.label :jabatan_id %><br>
+    <%= f.text_field :jabatan_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @suara_rakyat.name %>
+</p>
+
+<p>
+  <strong>Contact person:</strong>
+  <%= @suara_rakyat.contact_person %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @suara_rakyat.content %>
+</p>
+
+<%= link_to 'Edit', edit_suara_rakyat_path(@suara_rakyat) %> |
+<%= link_to 'Back', suara_rakyats_path %>

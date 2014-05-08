@@ -2,6 +2,9 @@ MassambaPu::Application.routes.draw do  #get '/pages' => 'page#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+  resources :suara_rakyats
+  resources :dpu_berita
+  resources :sekilas_infos
   resources :pages
 
   # You can have the root of your site routed with "root"

@@ -1,0 +1,2 @@
+module DpuBeritaHelper
+end

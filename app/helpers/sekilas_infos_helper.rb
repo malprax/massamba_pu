@@ -1,0 +1,2 @@
+module SekilasInfosHelper
+end

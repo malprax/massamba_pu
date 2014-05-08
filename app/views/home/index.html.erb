@@ -13,9 +13,11 @@
           <div class="span4">
             <h3>Berita DPU</h3>
             <p><%#= render "" %>
-                <%= truncate @page.content, length: 50 %></br>
-                <%= link_to 'Selengkapnya', @page, class:"btn"%>
+                <%= truncate @page.content, length: 50 %>
+                <%= @page.created_at %></br>
             </p>
+            <p><%= link_to 'Selengkapnya »', @page, class:"btn"%></p>
+          
            
           </div>
           <div class="span4">

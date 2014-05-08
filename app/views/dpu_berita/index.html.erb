@@ -1,0 +1,29 @@
+<h1>Listing dpu_berita</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dpu_berita.each do |dpu_beritum| %>
+      <tr>
+        <td><%= dpu_beritum.title %></td>
+        <td><%= dpu_beritum.content %></td>
+        <td><%= link_to 'Show', dpu_beritum %></td>
+        <td><%= link_to 'Edit', edit_dpu_beritum_path(dpu_beritum) %></td>
+        <td><%= link_to 'Destroy', dpu_beritum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dpu beritum', new_dpu_beritum_path %>

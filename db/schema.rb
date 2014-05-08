@@ -11,16 +11,61 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140411004624) do
+ActiveRecord::Schema.define(version: 20140508214830) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "daftar_pegawais", force: true do |t|
+    t.string   "name"
+    t.integer  "nip"
+    t.string   "pangkat_id"
+    t.string   "golongan_pangkat"
+    t.string   "jabatan_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "dpu_berita", force: true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "jabatans", force: true do |t|
+    t.string   "name_jabatan"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "pages", force: true do |t|
     t.string   "name"
     t.text     "content"
     t.string   "permalink"
     t.integer  "picture_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pangkats", force: true do |t|
+    t.string   "golongan"
+    t.string   "nama_pangkat"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sekilas_infos", force: true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "suara_rakyats", force: true do |t|
+    t.string   "name"
+    t.integer  "contact_person"
+    t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
