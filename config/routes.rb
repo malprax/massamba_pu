@@ -20,9 +20,9 @@ MassambaPu::Application.routes.draw do  #get '/pages' => 'page#index'
  get '/pegawai' => 'pages#show', :defaults => { :id => '6' }
  
  # Berita
-  get '/berita_dpu' => 'pages#show', :defaults => { :id => '6' }
-  get '/sekilas_info' => 'pages#show', :defaults => { :id => '7' }  
-  get '/suara_rakyat' => 'pages#show', :defaults => { :id => '9' }
+  get '/berita_dpu' => 'dpu_berita#show'
+  get '/sekilas_info' => 'sekilas_info#show'
+  get '/suara_rakyat' => 'suara_rakyats#show'
   
   # Info  
   get '/produk_data' => 'pages#show', :defaults => { :id => '11' } 
