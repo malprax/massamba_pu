@@ -10,6 +10,7 @@ class DpuBeritaController < ApplicationController
   # GET /dpu_berita/1
   # GET /dpu_berita/1.json
   def show
+  
   end
 
   # GET /dpu_berita/new

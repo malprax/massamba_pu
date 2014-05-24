@@ -12,11 +12,10 @@
         <div class="row">
           <div class="span4">
             <h3>Berita DPU</h3>
-            <p><%#= render "" %>
-                <%= truncate @page.content, length: 50 %>
-                <%= @page.created_at %></br>
-            </p>
-            <p><%= link_to 'Selengkapnya »', @page, class:"btn"%></p>
+            <% @dpu_berita.order("created_at desc").limit(3).each do |dpu_berita| %>
+            <p><%= link_to dpu_berita.title, dpu_beritum_path(dpu_berita) %></br></p>
+            <% end %>
+            
           
            
           </div>

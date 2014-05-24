@@ -1,7 +1,10 @@
 class HomeController < ApplicationController
 
-  def index   
-    @page = Page.find_by_id(1)
+  def index  
+    @dpu_berita = DpuBeritum.all
+    
+    # @pages = Page.all
+    # @page = Page.find(params[:id])
     
   end
   def design
