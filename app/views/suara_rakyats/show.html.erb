@@ -6,13 +6,18 @@
 </p>
 
 <p>
-  <strong>Contact person:</strong>
-  <%= @suara_rakyat.contact_person %>
+  <strong>Address:</strong>
+  <%= @suara_rakyat.address %>
 </p>
 
 <p>
-  <strong>Content:</strong>
-  <%= @suara_rakyat.content %>
+  <strong>Category suara:</strong>
+  <%= @suara_rakyat.category_suara_id %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @suara_rakyat.comment %>
 </p>
 
 <%= link_to 'Edit', edit_suara_rakyat_path(@suara_rakyat) %> |

@@ -1,38 +1,17 @@
 <div class="wrap">
   <%= render "shared/navigation" %>
   <div class="container">
-    <% @dpu_berita.order("created_at desc") do |dpu_berita| %>
-        <%= dpu_berita.content %>
-    <% end %>
-    <h3>Berita Dinas Pekerjaan Umum</h3>
-    
-    <h4><%#= @dpu_berita.title%></h4>
-    <p><%#=  @dpu_berita.content.recent%></p>  
- 
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Judul</th>        
-          <th></th>
-          <th></th>
-          <th></th>
-        </tr>
-      </thead>
 
-      <tbody>
-        <% @dpu_berita.each do |dpu_beritum| %>
-          <tr>
-            <td><%= link_to dpu_beritum.title, dpu_beritum %></td>      
-            <td><%= link_to 'Edit', edit_dpu_beritum_path(dpu_beritum) %></td>
-            <td><%= link_to 'Destroy', dpu_beritum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-
-    <br>
-
-    <%= link_to 'Buat Berita DPU', new_dpu_beritum_path %>
+        <% @dpu_berita.order("created_at desc").limit(1).each do |dpu_berita| %>
+          <h3><strong><%= dpu_berita.title%></strong></h3>
+          <p><%= simple_format dpu_berita.content %></p>
+        <% end %><br>
+        
+        <%= render 'dpu_berita/berita_lainnya' %>
   </div>
+  
+  <%= render 'shared/footer' %>
 </div>
+
+
 

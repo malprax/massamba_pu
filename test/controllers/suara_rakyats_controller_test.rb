@@ -18,7 +18,7 @@ class SuaraRakyatsControllerTest < ActionController::TestCase
 
   test "should create suara_rakyat" do
     assert_difference('SuaraRakyat.count') do
-      post :create, suara_rakyat: { contact_person: @suara_rakyat.contact_person, content: @suara_rakyat.content, name: @suara_rakyat.name }
+      post :create, suara_rakyat: { address: @suara_rakyat.address, category_suara_id: @suara_rakyat.category_suara_id, comment: @suara_rakyat.comment, name: @suara_rakyat.name }
     end
 
     assert_redirected_to suara_rakyat_path(assigns(:suara_rakyat))
@@ -35,7 +35,7 @@ class SuaraRakyatsControllerTest < ActionController::TestCase
   end
 
   test "should update suara_rakyat" do
-    patch :update, id: @suara_rakyat, suara_rakyat: { contact_person: @suara_rakyat.contact_person, content: @suara_rakyat.content, name: @suara_rakyat.name }
+    patch :update, id: @suara_rakyat, suara_rakyat: { address: @suara_rakyat.address, category_suara_id: @suara_rakyat.category_suara_id, comment: @suara_rakyat.comment, name: @suara_rakyat.name }
     assert_redirected_to suara_rakyat_path(assigns(:suara_rakyat))
   end
 

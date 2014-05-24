@@ -1,35 +1,33 @@
-<div class="wrap">
-  <%= render "shared/navigation" %>
-  <h1>Listing suara_rakyats</h1>
+<h1>Listing suara_rakyats</h1>
 
-  <table>
-    <thead>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Category suara</th>
+      <th>Comment</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @suara_rakyats.each do |suara_rakyat| %>
       <tr>
-        <th>Name</th>
-        <th>Contact person</th>
-        <th>Content</th>
-        <th></th>
-        <th></th>
-        <th></th>
+        <td><%= suara_rakyat.name %></td>
+        <td><%= suara_rakyat.address %></td>
+        <td><%= suara_rakyat.category_suara_id %></td>
+        <td><%= suara_rakyat.comment %></td>
+        <td><%= link_to 'Show', suara_rakyat %></td>
+        <td><%= link_to 'Edit', edit_suara_rakyat_path(suara_rakyat) %></td>
+        <td><%= link_to 'Destroy', suara_rakyat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    </thead>
+    <% end %>
+  </tbody>
+</table>
 
-    <tbody>
-      <% @suara_rakyats.each do |suara_rakyat| %>
-        <tr>
-          <td><%= suara_rakyat.name %></td>
-          <td><%= suara_rakyat.contact_person %></td>
-          <td><%= suara_rakyat.content %></td>
-          <td><%= link_to 'Show', suara_rakyat %></td>
-          <td><%= link_to 'Edit', edit_suara_rakyat_path(suara_rakyat) %></td>
-          <td><%= link_to 'Destroy', suara_rakyat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+<br>
 
-  <br>
-
-  <%= link_to 'New Suara rakyat', new_suara_rakyat_path %>
-  
-</div>
+<%= link_to 'New Suara rakyat', new_suara_rakyat_path %>

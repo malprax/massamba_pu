@@ -2,8 +2,9 @@ class CreateSuaraRakyats < ActiveRecord::Migration
   def change
     create_table :suara_rakyats do |t|
       t.string :name
-      t.integer :contact_person
-      t.text :content
+      t.string :address
+      t.string :category_suara_id
+      t.text :comment
 
       t.timestamps
     end

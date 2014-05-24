@@ -2,10 +2,12 @@
 
 one:
   name: MyString
-  contact_person: 1
-  content: MyText
+  address: MyString
+  category_suara_id: MyString
+  comment: MyText
 
 two:
   name: MyString
-  contact_person: 1
-  content: MyText
+  address: MyString
+  category_suara_id: MyString
+  comment: MyText

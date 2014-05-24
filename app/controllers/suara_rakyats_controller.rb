@@ -69,6 +69,6 @@ class SuaraRakyatsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def suara_rakyat_params
-      params.require(:suara_rakyat).permit(:name, :contact_person, :content)
+      params.require(:suara_rakyat).permit(:name, :address, :category_suara_id, :comment)
     end
 end

@@ -1,6 +1,11 @@
-<h1>Editing dpu_beritum</h1>
+<div class="wrap">
+  <%= render "shared/navigation" %>
+  <div class="container">
+    <%= render 'form' %>
+    <%= link_to 'Show', @dpu_beritum %> |
+    <%= link_to 'Back', dpu_berita_path %>    
+  </div> 
+</div>
 
-<%= render 'form' %>
 
-<%= link_to 'Show', @dpu_beritum %> |
-<%= link_to 'Back', dpu_berita_path %>
+

@@ -1,0 +1,4 @@
+        <h4>Berita Lainnya</h4>
+        <% @dpu_berita.order("created_at desc").limit(4).offset(1).each do |dpu_berita| %>
+        <p><%= link_to dpu_berita.title, dpu_berita %></p>      
+        <% end %><br>   
