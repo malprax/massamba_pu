@@ -10,6 +10,35 @@
         <%= render 'dpu_berita/berita_lainnya' %>
   </div>
   
+  <!-- <div class="container"> 
+    <table class="table">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Berita Dinas Pekerjaan Umum</th>        
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @dpu_berita.each_with_index do |dpu_beritum, i| %>
+          <tr>
+            <td><%= i = i + 1 %></td>
+            <td><%= link_to dpu_beritum.title, dpu_beritum %></td>      
+            <td><%= link_to 'Edit', edit_dpu_beritum_path(dpu_beritum) %></td>
+            <td><%= link_to 'Destroy', dpu_beritum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>
+
+    <%= link_to 'Buat Berita DPU', new_dpu_beritum_path, class:"btn" %>
+  </div> -->
+  
   <%= render 'shared/footer' %>
 </div>
 

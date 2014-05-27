@@ -4,6 +4,8 @@ MassambaPu::Application.routes.draw do  #get '/pages' => 'page#index'
   # See how all your routes lay out with "rake routes".
   resources :suara_rakyats
   resources :dpu_berita
+  
+  
   resources :sekilas_infos
   resources :pages
 
@@ -20,7 +22,7 @@ MassambaPu::Application.routes.draw do  #get '/pages' => 'page#index'
  get '/pegawai' => 'pages#show', :defaults => { :id => '6' }
  
  # Berita
-  get '/berita_dpu' => 'dpu_berita#show'
+  # get '/berita_dpu' => 'dpu_berita#show'
   get '/sekilas_info' => 'sekilas_info#show'
   get '/suara_rakyat' => 'suara_rakyats#show'
   

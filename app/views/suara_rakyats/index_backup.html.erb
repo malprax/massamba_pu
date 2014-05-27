@@ -1,21 +1,4 @@
-<div class="wrap">
-  <%= render "shared/navigation" %>
-  <div class="container">
-
-        <% @dpu_berita.order("created_at desc").limit(1).each do |dpu_berita| %>
-          <h3><strong><%= dpu_berita.title%></strong></h3>
-          <p><%= simple_format dpu_berita.content %></p>
-        <% end %><br>
-        
-       <h4>Suara Rakyat</h4>
-       <% @suara_rakyat.order("created_at desc").limit(10).offset(1).each do |suara_rakyat| %>
-       <p><%= link_to suara_rakyat.name, suara_rakyat %></p>      
-       <% end %><br>
-  </div>
-        
-</div> 
-
-<!-- <h1>Listing suara_rakyats</h1>
+<h1>Listing suara_rakyats</h1>
 
 <table>
   <thead>
@@ -47,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Suara rakyat', new_suara_rakyat_path %> -->
+<%= link_to 'New Suara rakyat', new_suara_rakyat_path %>

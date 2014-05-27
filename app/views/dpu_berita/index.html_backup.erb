@@ -1,11 +1,6 @@
 <div class="wrap">
   <%= render "shared/navigation" %>
-  <div class="container">
-    <% @dpu_berita.order("created_at desc") do |dpu_berita| %>
-        <%= dpu_berita.content %>
-    <% end %>
-   
- 
+  <div class="container"> 
     <table class="table">
       <thead>
         <tr>

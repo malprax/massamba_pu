@@ -13,7 +13,7 @@
           <div class="span4">
             <h3>Berita DPU</h3>
             <% @dpu_berita.order("created_at desc").limit(3).each do |dpu_berita| %>
-            <p><%= link_to dpu_berita.title, dpu_beritum_path(dpu_berita) %></br></p>
+            <p><%= link_to dpu_berita.title, dpu_beritum_path(dpu_berita) %>&nbsp; &nbsp;--<%= dpu_berita.created_at.strftime("%d %b %y").downcase %></br></p>
             <% end %>
             
           
@@ -21,8 +21,10 @@
           </div>
           <div class="span4">
             <h3>Sekilas Info</h3>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn" href="#">View details »</a></p>
+            <p>          
+                <%= truncate(@sekilas_infos.content, length: 90)%>          
+            </p>
+            <p><%= link_to "Selengkapnya »", @sekilas_infos%></p>
          </div>
           <div class="span4">
             <h3>Suara Rakyat(Pengaduan)</h3>
