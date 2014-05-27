@@ -25,9 +25,9 @@
          </div>
           <div class="span4">
             <h3>Suara Rakyat(Pengaduan)</h3>            
-            <% @dpu_berita.order("created_at desc").limit(3).each do |dpu_berita| %>
-            <p><%= link_to dpu_berita.title, dpu_beritum_path(dpu_berita) %>&nbsp; &nbsp;-- &nbsp;<%= dpu_berita.created_at.strftime("%d %b %y").downcase %></br></p>
-            <% end %>
+            <%# @suara_rakyat.order("created_at desc").limit(3).each do |dpu_berita| %>
+            <p><%#= link_to dpu_berita.title, dpu_beritum_path(dpu_berita) %>&nbsp; &nbsp;-- &nbsp;<%#= dpu_berita.created_at.strftime("%d %b %y").downcase %></br></p>
+            <% #end %>
             <p><a class="btn" href="#">View details »</a></p>
           </div>
         </div>

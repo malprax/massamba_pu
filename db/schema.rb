@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140524135522) do
+ActiveRecord::Schema.define(version: 20140527140012) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categori_suaras", force: true do |t|
+    t.string   "jenis_suara"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "categori_suaras", ["jenis_suara"], name: "index_categori_suaras_on_jenis_suara", using: :btree
 
   create_table "daftar_pegawais", force: true do |t|
     t.string   "name"
@@ -65,7 +73,7 @@ ActiveRecord::Schema.define(version: 20140524135522) do
   create_table "suara_rakyats", force: true do |t|
     t.string   "name"
     t.string   "address"
-    t.string   "category_suara_id"
+    t.integer  "categori_suara_id"
     t.text     "comment"
     t.datetime "created_at"
     t.datetime "updated_at"

@@ -3,7 +3,7 @@ class CreateSuaraRakyats < ActiveRecord::Migration
     create_table :suara_rakyats do |t|
       t.string :name
       t.string :address
-      t.string :category_suara_id
+      t.integer :categori_suara_id
       t.text :comment
 
       t.timestamps

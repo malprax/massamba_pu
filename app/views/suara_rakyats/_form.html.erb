@@ -20,8 +20,8 @@
     <%= f.text_field :address %>
   </div>
   <div class="field">
-    <%= f.label :category_suara_id %><br>
-    <%= f.text_field :category_suara_id %>
+    <%= f.label :categori_suara_id %><br>
+    <%= f.collection_select(:categori_suara_id, CategoriSuara.order("created_at asc"), :id, :jenis_suara)  %>
   </div>
   <div class="field">
     <%= f.label :comment %><br>
