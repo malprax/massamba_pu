@@ -1,14 +1,12 @@
-<p id="notice"><%= notice %></p>
+<div class= "wrap">
+  <%= render "shared/navigation" %>
+  <div class="container">    
+    <p id="notice"><%= notice %></p>
+    <h3><strong><%= @sekilas_info.title %></strong></h3>
+    <p> <%= simple_format  @sekilas_info.content %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @sekilas_info.title %>
-</p>
+    <%= link_to 'Edit', edit_sekilas_info_path(@sekilas_info) %> |
+    <%= link_to 'Back', sekilas_infos_path %>    
+  </div>  
+</div>
 
-<p>
-  <strong>Content:</strong>
-  <%= @sekilas_info.content %>
-</p>
-
-<%= link_to 'Edit', edit_sekilas_info_path(@sekilas_info) %> |
-<%= link_to 'Back', sekilas_infos_path %>

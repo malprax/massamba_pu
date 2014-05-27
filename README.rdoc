@@ -35,4 +35,14 @@ Scraping berita
 Perbaiki Desain CSS
 Validasi member lewat email
 
+27 mei 2014
+Struktural Organisasi
+Daftar Pegawai
+Scraping berita
+Validasi member oleh admin
+Galeri
+Suara Pengaduan
+
+
+
 
