@@ -1,7 +1,9 @@
-<%= render "shared/navigation" %>
-<div class="container">
-  <h3>Editing Suara Rakyat</h3>
-  <%= render 'form' %>
-  <%= link_to 'Show', @suara_rakyat %> |
-  <%= link_to 'Back', suara_rakyats_path %>  
+<div class="wrap">
+  <%= render "shared/navigation" %>
+  <div class="container">
+    <h3>Edit Suara Rakyat</h3>
+    <%= render 'form' %>
+    <%= link_to '« Kembali', admin_suara_rakyat_path %> 
+  </div>
 </div>
+

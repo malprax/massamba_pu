@@ -4,7 +4,7 @@ class SekilasInfosController < ApplicationController
   # GET /sekilas_infos
   # GET /sekilas_infos.json
   def index
-    @sekilas_infos ||= SekilasInfo.all
+    @sekilas_infos = SekilasInfo.all
   end
 
   # GET /sekilas_infos/1

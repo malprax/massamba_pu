@@ -1,0 +1,37 @@
+<div class="wrap">
+  <%= render 'shared/navigation' %>
+  <div class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Nama</th>
+          <th>Alamat</th>
+          <th>Jenis</th>
+          <th>Komentar</th>          
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @suara_rakyats.each_with_index do |suara_rakyat, i| %>
+          <tr>
+            <td><%= i = i + 1 %></td>
+            <td><%= suara_rakyat.name %></td>
+            <td><%= suara_rakyat.address %></td>
+            <td><%= suara_rakyat.categori_suara.jenis_suara %></td>
+            <td><%= link_to truncate(suara_rakyat.comment, length: 10), suara_rakyat %></td>            
+            <td><%= link_to 'Edit', edit_suara_rakyat_path(suara_rakyat) %></td>
+            <td><%= link_to 'Hapus', suara_rakyat, method: :delete, data: { confirm: 'Apakah Anda Yakin?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>
+
+    <%= link_to 'Buat Suara rakyat', new_suara_rakyat_path %> || <%= link_to 'Menu Admin »', admin_path %>
+    
+  </div>
+</div>

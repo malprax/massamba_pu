@@ -18,7 +18,7 @@
             <td><%= i = i + 1 %></td>
             <td><%= link_to dpu_beritum.title, dpu_beritum %></td>      
             <td><%= link_to 'Edit', edit_dpu_beritum_path(dpu_beritum) %></td>
-            <td><%= link_to 'Destroy', dpu_beritum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Hapus', dpu_beritum, method: :delete, data: { confirm: 'Apakah Anda Yakin?'} %></td>
           </tr>
         <% end %>
       </tbody>
@@ -26,7 +26,7 @@
 
     <br>
 
-    <%= link_to 'Buat Berita DPU', new_dpu_beritum_path, class:"btn" %>
+    <%= link_to 'Buat Berita DPU', new_dpu_beritum_path %> || <%= link_to 'Menu Admin »', admin_path %>
   </div>
 </div>
 <%= render 'shared/footer' %>

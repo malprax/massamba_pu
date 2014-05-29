@@ -1,7 +1,9 @@
-<%= render "shared/navigation" %>
 <div class="container">
-  <h3>Edit Sekilas Info</h3>
-  <%= render 'form' %>
-  <%= link_to 'Show', @sekilas_info %> |
-  <%= link_to 'Back', sekilas_infos_path %>  
+  <%= render "shared/navigation" %>
+  <div class="container">
+    <h3>Edit Sekilas Info</h3>
+    <%= render 'form' %> 
+    <%= link_to '« Kembali', admin_sekilas_info_path %>  
+  </div>
 </div>
+

@@ -1,0 +1,30 @@
+<div class="wrap">
+  <%= render "shared/navigation" %>
+  <div class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Judul</th>               
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @sekilas_infos.each_with_index do |sekilas_info, i| %>
+          <tr>
+            <td><%= i = i + 1 %></td>
+            <td><%= link_to sekilas_info.title, sekilas_info %></td>        
+            <td><%= link_to 'Edit', edit_sekilas_info_path(sekilas_info) %></td>
+            <td><%= link_to 'Hapus', sekilas_info, method: :delete, data: { confirm: 'Apakah Anda Yakin?'} %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>
+
+    <%= link_to 'Buat Sekilas info', new_sekilas_info_path %> || <%= link_to 'Menu Admin »', admin_path %>
+  </div>
+</div>

@@ -12,19 +12,19 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label :name, "Nama" %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :address %><br>
+    <%= f.label :address, "Alamat Lengkap" %><br>
     <%= f.text_field :address %>
   </div>
   <div class="field">
-    <%= f.label :categori_suara_id %><br>
+    <%= f.label :categori_suara_id, "Jenis" %><br>
     <%= f.collection_select(:categori_suara_id, CategoriSuara.order("created_at asc"), :id, :jenis_suara)  %>
   </div>
   <div class="field">
-    <%= f.label :comment %><br>
+    <%= f.label :comment, "Komentar" %><br>
     <%= f.text_area :comment %>
   </div>
   <div class="actions">

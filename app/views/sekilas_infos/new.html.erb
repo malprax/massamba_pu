@@ -1,5 +1,9 @@
-<h1>New sekilas_info</h1>
 
-<%= render 'form' %>
-
-<%= link_to 'Back', sekilas_infos_path %>
+<div class="wrap">
+  <%= render "shared/navigation" %>
+  <div class="container">
+    <h3>Buat Sekilas Info</h3>
+    <%= render 'form' %>
+    <%= link_to '« Kembali', admin_sekilas_info_path %>
+  </div> 
+</div>

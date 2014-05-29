@@ -1,5 +1,9 @@
-<h1>New dpu_beritum</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Back', dpu_berita_path %>
+ 
+<div class="wrap">
+  <%= render "shared/navigation" %>
+  <div class="container">
+    <h3>Buat Berita DPU</h3>
+    <%= render 'form' %>
+    <%= link_to '« Kembali', admin_berita_dpu_path %>
+  </div> 
+</div>

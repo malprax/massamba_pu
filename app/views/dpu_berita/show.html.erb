@@ -4,8 +4,8 @@
     <p id="notice"><%= notice %></p>
     <h3><strong><%= @dpu_beritum.title %></strong></h3>
     <p> <%= simple_format  @dpu_beritum.content %></p>
-
-    <%= link_to 'Edit', edit_dpu_beritum_path(@dpu_beritum) %> |
-    <%= link_to 'Back', dpu_berita_path %>
+    <%= link_to '« Kembali', admin_berita_dpu_path %> |
+    <%= link_to 'Edit', edit_dpu_beritum_path(@dpu_beritum) %> 
+    
   </div>  
 </div>
