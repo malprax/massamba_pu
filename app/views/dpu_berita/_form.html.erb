@@ -22,6 +22,6 @@
   
  
   <div class="actions">
-    <%= f.submit %>
+    <%= action_name == "new"? (f.submit "Buat Berita DPU") : (f.submit "Update Berita DPU")  %>
   </div>
 <% end %>

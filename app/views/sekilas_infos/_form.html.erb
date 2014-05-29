@@ -20,10 +20,6 @@
     <%= f.text_area :content %>
   </div>
   <div class="actions">
-    <%# if params[:action]== "new" %>
-    <%= f.submit %>
-    <%# else %>
-    <%#= f.submit, "Edit Sekilas Info"  %>
-    <%# end %>
+      <%= action_name == "new" ? (f.submit "Buat Sekilas Info") : (f.submit "Update Sekilas Info") %>
   </div>
 <% end %>
