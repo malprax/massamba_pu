@@ -3,9 +3,9 @@
   <div class="container">
        <h3>Suara Rakyat</h3> 
         <% @suara_rakyats.order("created_at desc").limit(10).each do |suara_rakyat| %>
-          <h4><strong><%= suara_rakyat.name%></strong></h4>
-          <p><%= simple_format suara_rakyat.comment %></p>
-        <% end %><br>     
+          <p><strong><%= suara_rakyat.name%></strong>&nbsp;--&nbsp;<%= suara_rakyat.address %></p>
+          <p><%= simple_format suara_rakyat.comment %></p></br>   
+        <% end %>  
   </div>        
 
 

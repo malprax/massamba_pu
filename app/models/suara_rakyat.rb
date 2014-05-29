@@ -3,4 +3,6 @@ class SuaraRakyat < ActiveRecord::Base
   # has_many :categori_suaras, dependent: :destroy
   belongs_to :categori_suara
   scope :pengaduan_terbaru, -> {order("created_at desc").first}
+  
+
 end

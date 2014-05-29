@@ -1,24 +1,27 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @suara_rakyat.name %>
-</p>
+  <p>
+    <strong>Name:</strong>
+    <%= @suara_rakyat.name %>
+  </p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @suara_rakyat.address %>
-</p>
+  <p>
+    <strong>Address:</strong>
+    <%= @suara_rakyat.address %>
+  </p>
 
-<p>
-  <strong>Category suara:</strong>
-  <%= @suara_rakyat.categori_suara.jenis_suara%>
-</p>
+  <p>
+    <strong>Category suara:</strong>
+    <%= @suara_rakyat.categori_suara.jenis_suara%>
+  </p>
 
-<p>
-  <strong>Comment:</strong>
-  <%= @suara_rakyat.comment %>
-</p>
+  <p>
+    <strong>Comment:</strong>
+    <%= @suara_rakyat.comment %>
+  </p>
 
-<%= link_to 'Edit', edit_suara_rakyat_path(@suara_rakyat) %> |
-<%= link_to 'Back', suara_rakyats_path %>
+  <%= link_to 'Edit', edit_suara_rakyat_path(@suara_rakyat) %> |
+  <%= link_to 'Back', suara_rakyats_path %>
+  
+</div>
