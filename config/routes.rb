@@ -2,6 +2,7 @@ MassambaPu::Application.routes.draw do  #get '/pages' => 'page#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+  get '/admin' => 'admin#index'
   resources :suara_rakyats
   resources :dpu_berita
   
@@ -14,18 +15,18 @@ MassambaPu::Application.routes.draw do  #get '/pages' => 'page#index'
   root 'home#index'
   
   # Profil
- get '/sambutan_kepala_dinas' => 'pages#show', :defaults => { :id => '1' }
- get '/sejarah' => 'pages#show', :defaults => { :id => '2' }
- get '/struktur_organisasi' => 'pages#show', :defaults => { :id => '3' }
- get '/tugas_pokok_dan_fungsi' => 'pages#show', :defaults => { :id => '4' }
- get '/visi_dan_misi' => 'pages#show', :defaults => { :id => '5' }
- get '/pegawai' => 'pages#show', :defaults => { :id => '6' }
+   get '/sambutan_kepala_dinas' => 'pages#show', :defaults => { :id => '1' }
+   get '/sejarah' => 'pages#show', :defaults => { :id => '2' }
+   get '/struktur_organisasi' => 'pages#show', :defaults => { :id => '3' }
+   get '/tugas_pokok_dan_fungsi' => 'pages#show', :defaults => { :id => '4' }
+   get '/visi_dan_misi' => 'pages#show', :defaults => { :id => '5' }
+   get '/pegawai' => 'pages#show', :defaults => { :id => '6' }
  
  # Berita
   # get '/berita_dpu' => 'dpu_berita#show'
   get '/sekilas_info' => 'sekilas_info#show'
   get '/suara_rakyat' => 'suara_rakyats#show'
-  
+
   # Info  
   get '/produk_data' => 'pages#show', :defaults => { :id => '11' } 
   get '/program_dan_anggaran' => 'pages#show', :defaults => { :id => '13' }

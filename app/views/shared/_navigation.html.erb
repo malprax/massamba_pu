@@ -84,7 +84,10 @@
                                 </li>
                                 
                                    
-                                <% if user_signed_in? %>       
+                                <% if user_signed_in? %> 
+                                <li >
+                                    <%= link_to 'Admin', admin_path %>                        
+                                <li>      
                               
                                 <li >
                                     <%#= link_to 'Edit Profil', edit_user_registration_path %>                        
