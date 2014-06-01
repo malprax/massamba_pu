@@ -43,6 +43,14 @@ Validasi member oleh admin
 Galeri
 Suara Pengaduan
 
+31 mei 2014
+galeri
+organization chart
+gem honey pot captcha
+gem ckeditor
+validasi
+
+2 juni 2014
 
 
 

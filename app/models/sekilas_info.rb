@@ -1,5 +1,6 @@
 class SekilasInfo < ActiveRecord::Base
-  # attr_accessible :title, :content
+  # information table  :title, :content
   scope :terbaru, -> {order("created_at desc").first}
+  validates :title, :content, presence: true
   
 end
