@@ -49,8 +49,14 @@ organization chart
 gem honey pot captcha
 gem ckeditor
 validasi
+domain
+konfirmasi email
 
 2 juni 2014
+galeri
+organization chart
+gem ckeditor
+konfirmasi email
 
 
 
