@@ -1,4 +1,4 @@
-<%= form_for(@sekilas_info) do |f| %>
+<%= form_for(@sekilas_info), :html => {:honeypot => true} do |f| %>
   <% if @sekilas_info.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@sekilas_info.errors.count, "error") %> prohibited this sekilas_info from being saved:</h2>

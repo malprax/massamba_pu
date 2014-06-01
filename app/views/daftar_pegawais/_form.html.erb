@@ -1,4 +1,4 @@
-<%= form_for(@daftar_pegawai) do |f| %>
+<%= form_for(@daftar_pegawai), :html => {:honeypot => true} do |f| %>
   <% if @daftar_pegawai.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@daftar_pegawai.errors.count, "error") %> prohibited this daftar_pegawai from being saved:</h2>
