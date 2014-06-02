@@ -59,4 +59,14 @@ gem ckeditor
 konfirmasi email
 
 
+al fatihah
+ayat kursi
+al ikhlas
+al falaq
+an naas
+al araaf 117 -122
+yunus 81 - 82
+thaha 68 - 70
+
+
 
