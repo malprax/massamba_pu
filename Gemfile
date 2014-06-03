@@ -92,6 +92,9 @@ gem "mini_magick"
 gem "rmagick"     
 gem 'unf' 
 
+#editor
+gem 'ckeditor'
+
 #enable all platform features
 group :production do
   gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'

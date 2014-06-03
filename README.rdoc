@@ -58,6 +58,10 @@ organization chart
 gem ckeditor
 konfirmasi email
 
+2 juni 2014
+galeri
+organization chart
+gem ckeditor
 
 al fatihah
 ayat kursi
@@ -68,5 +72,14 @@ al araaf 117 -122
 yunus 81 - 82
 thaha 68 - 70
 
+
+kalu tidur
+al fatihah
+ayat kursi
+al ikhlas
+al falaq
+an naas
+
+albaqarah 148
 
 
