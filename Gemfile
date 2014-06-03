@@ -73,8 +73,8 @@ gem 'cancan'
 gem 'puma'
 
 #cloudfolder
-# gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
-# gem "paperclip-dropbox" 
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+gem "paperclip-dropbox" 
 # gem 'cocaine'
 # gem 'dropbox-sdk'
 
@@ -94,6 +94,7 @@ gem 'unf'
 
 #editor
 gem 'ckeditor'
+
 
 #enable all platform features
 group :production do
