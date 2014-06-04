@@ -7,12 +7,12 @@
                 <!-- About -->
                 <li class="header" >Profil</li>                             
                  
-                    <li><%= link_to 'Sambutan Kepala Dinas',sambutan_kepala_dinas_path %></li>
-                    <li><%= link_to 'Sejarah', sejarah_path %></li>
-                    <li><%= link_to 'Struktur Organisasi', struktur_organisasi_path %></li>
-                    <li><%= link_to 'Tugas Pokok Dan Fungsi', tugas_pokok_dan_fungsi_path %></li>
-                    <li><%= link_to 'Visi Dan Misi', visi_dan_misi_path %></li>
-                    <li><%= link_to 'Pegawai', pegawai_path %></li>                    
+                    <li><%= link_to 'Sambutan Kepala Dinas',sambutan_kepala_dinas_path( :edit => true)%></li>
+                    <li><%= link_to 'Sejarah', sejarah_path( :edit => true) %></li>
+                    <li><%= link_to 'Struktur Organisasi', struktur_organisasi_path( :edit => true) %></li>
+                    <li><%= link_to 'Tugas Pokok Dan Fungsi', tugas_pokok_dan_fungsi_path( :edit => true) %></li>
+                    <li><%= link_to 'Visi Dan Misi', visi_dan_misi_path( :edit => true) %></li>
+                    <li><%= link_to 'Pegawai', pegawai_path( :edit => true) %></li>                    
                 <!--  -->
                 
                 <!-- campus -->
@@ -25,19 +25,19 @@
                 <!-- curriculum -->
                 <li class="header" >Info</li>      
                     <li><%= link_to 'Galeri Foto', "#" %></li>
-                    <li><%= link_to 'Produk Data', produk_data_path %></li>
-                    <li><%= link_to 'Program Dan Anggaran', program_dan_anggaran_path %></li>
-                    <li><%= link_to 'Proyek Strategis', proyek_strategis_path %></li>
+                    <li><%= link_to 'Produk Data', produk_data_path( :edit => true) %></li>
+                    <li><%= link_to 'Program Dan Anggaran', program_dan_anggaran_path( :edit => true) %></li>
+                    <li><%= link_to 'Proyek Strategis', proyek_strategis_path( :edit => true) %></li>
                     <li><%= link_to 'Video', "#" %></li>                           
                 <!--  -->
                 <!-- Programs -->
                 <li class="header" >Unit Kerja</li>                        
-                    <li><%= link_to 'Sekretariat', sekretariat_path %></li>
-                    <li><%= link_to 'Bidang Bina Marga', bina_marga_path %></li>
-                    <li><%= link_to 'Bidang Cipta Karya', cipta_karya_path %></li>
-                    <li><%= link_to 'Bidang Penataan Ruang', penataan_ruang_path %></li>
-                    <li><%= link_to 'Bidang Kebersihan', kebersihan_path %></li> 
-                    <li><%= link_to 'Bidang Pengairan', pengairan_path %></li> 
+                    <li><%= link_to 'Sekretariat', sekretariat_path( :edit => true) %></li>
+                    <li><%= link_to 'Bidang Bina Marga', bina_marga_path( :edit => true) %></li>
+                    <li><%= link_to 'Bidang Cipta Karya', cipta_karya_path( :edit => true) %></li>
+                    <li><%= link_to 'Bidang Penataan Ruang', penataan_ruang_path( :edit => true) %></li>
+                    <li><%= link_to 'Bidang Kebersihan', kebersihan_path( :edit => true) %></li> 
+                    <li><%= link_to 'Bidang Pengairan', pengairan_path( :edit => true) %></li> 
                     <li><%= link_to 'UPTD', '#'%></li>                                             
                 <!--  -->                    
             </ul> 
