@@ -1,4 +1,4 @@
-<%= form_for(@sekilas_info), :html => {:honeypot => true} do |f| %>
+<%= form_for @sekilas_info, :html => {:honeypot => true} do |f| %>
   <% if @sekilas_info.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@sekilas_info.errors.count, "error") %> prohibited this sekilas_info from being saved:</h2>
@@ -17,8 +17,10 @@
   </div>
   <div class="field">
     <%= f.label :content, "Isi" %><br>
-    <%= f.text_area :content %>
+    <%= f.cktext_area :content, :id => 'Isi_sekilas_info' %>
   </div>
+  
+  
   <div class="actions">
       <%= action_name == "new" ? (f.submit "Buat Sekilas Info") : (f.submit "Update Sekilas Info") %>
   </div>

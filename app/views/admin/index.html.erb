@@ -14,14 +14,14 @@
                     <li><%= link_to 'Visi Dan Misi', visi_dan_misi_path( :edit => true) %></li>
                     <li><%= link_to 'Pegawai', pegawai_path( :edit => true) %></li>                    
                 <!--  -->
-                
+              </br>
                 <!-- campus -->
                 <li class="header" >Berita</li>         
-                    <li><%= link_to 'berita DPU', admin_berita_dpu_path %></li>
-                    <li><%= link_to 'Sekilas Info', admin_sekilas_info_path%></li>                   
-                    <li><%= link_to 'Suara Rakyat', admin_suara_rakyat_path %></li>                                
+                    <li><%= link_to 'berita DPU', admin_berita_dpu_path( :edit => true) %></li>
+                    <li><%= link_to 'Sekilas Info', admin_sekilas_info_path( :edit => true) %></li>                   
+                    <li><%= link_to 'Suara Rakyat', admin_suara_rakyat_path( :edit => true) %></li>                                
                 <!--  -->
-                
+              </br>   
                 <!-- curriculum -->
                 <li class="header" >Info</li>      
                     <li><%= link_to 'Galeri Foto', "#" %></li>
@@ -30,6 +30,7 @@
                     <li><%= link_to 'Proyek Strategis', proyek_strategis_path( :edit => true) %></li>
                     <li><%= link_to 'Video', "#" %></li>                           
                 <!--  -->
+              </br>
                 <!-- Programs -->
                 <li class="header" >Unit Kerja</li>                        
                     <li><%= link_to 'Sekretariat', sekretariat_path( :edit => true) %></li>
@@ -39,11 +40,14 @@
                     <li><%= link_to 'Bidang Kebersihan', kebersihan_path( :edit => true) %></li> 
                     <li><%= link_to 'Bidang Pengairan', pengairan_path( :edit => true) %></li> 
                     <li><%= link_to 'UPTD', '#'%></li>                                             
-                <!--  -->                    
+                <!--  --> 
+                                                  
             </ul> 
         </div>
       </div>
-     <p class="pull-left"><%= link_to 'Ke Beranda »', root_url %></p></br>
+     <div class="pull-left"><%= link_to 'Ke Beranda »', root_url, class: 'btn' %></div>
+     </br>
+     </br>
      </div>
  
 </div>
