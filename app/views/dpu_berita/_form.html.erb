@@ -1,4 +1,4 @@
-<%= form_for(@dpu_beritum), :html => {:honeypot => true} do |f| %>
+<%= form_for @dpu_beritum, :html => {:honeypot => true} do |f| %>
   <% if @dpu_beritum.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@dpu_beritum.errors.count, "error") %> prohibited this dpu_beritum from being saved:</h2>
@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :content, "Isi" %><br>
-    <%= f.text_area :content %>
+    <%= f.cktext_area :content, :value => 'default value', :id => 'sometext' %>
   </div>
   
  
