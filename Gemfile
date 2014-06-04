@@ -95,6 +95,9 @@ gem 'unf'
 #editor
 gem 'ckeditor'
 
+#notifier
+gem "uniform_notifier"
+
 
 #enable all platform features
 group :production do
