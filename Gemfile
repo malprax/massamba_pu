@@ -13,6 +13,9 @@ gem 'sass-rails', '~> 4.0.2'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
+
+gem 'compass-rails' 
+
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 
@@ -62,9 +65,9 @@ gem 'devise'
 # gem 'tzinfo'
 
 #twitter_bootstrap
-gem "therubyracer", platforms: :ruby
-gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
-gem "twitter-bootstrap-rails"
+gem 'therubyracer', platforms: :ruby
+gem 'less-rails' #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem 'twitter-bootstrap-rails'
 
 #user_authority
 gem 'cancan'
@@ -73,8 +76,8 @@ gem 'cancan'
 gem 'puma'
 
 #cloudfolder
-gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
-gem "paperclip-dropbox" 
+gem 'paperclip', :git => "git://github.com/thoughtbot/paperclip.git"
+gem 'paperclip-dropbox'
 # gem 'cocaine'
 # gem 'dropbox-sdk'
 
@@ -83,20 +86,25 @@ gem 'honeypot-captcha'
 
 # location, maps, route
 gem 'gmaps4rails', ">=2.0"
-gem "geocoder"
+gem 'geocoder'
+
+#organization chart
+gem 'google_visualr', "~> 2.3.0"
 
 # upload file
-gem "carrierwave"
-gem "fog"
-gem "mini_magick"
-gem "rmagick"     
+gem 'carrierwave'
+gem 'fog'
+gem 'mini_magick'
+gem 'rmagick'    
 gem 'unf' 
 
 #editor
 gem 'ckeditor'
 
+gem 'coderay'
+
 #notifier
-gem "uniform_notifier"
+gem 'uniform_notifier'
 
 # Periodically check your error monitoring tool, if you see some part of ckeditor try to load unexisting non-digest asset - if so just add it in the ckeditor rake task.
 gem 'non-stupid-digest-assets', '~> 1.0.4'
