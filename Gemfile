@@ -98,6 +98,9 @@ gem 'ckeditor'
 #notifier
 gem "uniform_notifier"
 
+# Periodically check your error monitoring tool, if you see some part of ckeditor try to load unexisting non-digest asset - if so just add it in the ckeditor rake task.
+gem 'non-stupid-digest-assets', '~> 1.0.4'
+
 
 #enable all platform features
 group :production do
