@@ -1,5 +1,4 @@
-<p>Welcome <%= @email %>!</p>
+<p>Selamat Bergabung Di Website resmi DPU-Lutra <%= @email %>!</p>
+<p>Anda dapat mengkonfirmasi akun email anda melalui link berikut:</p>
 
-<p>You can confirm your account email through the link below:</p>
-
-<p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+<p><%= link_to 'Konfirmasi Akun Saya', confirmation_url(@resource, confirmation_token: @token) %></p>
