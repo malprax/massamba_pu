@@ -98,6 +98,7 @@ gem 'unf'
 #editor
 gem 'ckeditor'
 
+#to highlights words in views
 gem 'coderay'
 
 #notifier
@@ -105,6 +106,9 @@ gem 'uniform_notifier'
 
 # Periodically check your error monitoring tool, if you see some part of ckeditor try to load unexisting non-digest asset - if so just add it in the ckeditor rake task.
 gem 'non-stupid-digest-assets', '~> 1.0.4'
+
+#to-add_sortable position in columns
+gem 'acts_as_list'
 
 
 #enable all platform features
