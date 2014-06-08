@@ -1,10 +1,10 @@
 class CreatePangkats < ActiveRecord::Migration
   def change
-    create_table :pangkats do |t|
-      t.string :golongan
-      t.string :name_pangkat
+    create_table :pangkats do |t|     
+      t.string :nama_pangkat
 
-      t.timestamps
+      t.timestamps      
     end
+    add_index :pangkats, :nama_pangkat
   end
 end

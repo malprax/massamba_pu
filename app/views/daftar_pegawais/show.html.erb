@@ -15,17 +15,12 @@
 
       <p>
         <strong>Pangkat:</strong>
-        <%= @daftar_pegawai.pangkat_id %>
-      </p>
-
-      <p>
-        <strong>Golongan pangkat:</strong>
-        <%= @daftar_pegawai.golongan_pangkat %>
-      </p>
+        <%= @daftar_pegawai.pangkat.nama_pangkat %>
+      </p>     
 
       <p>
         <strong>Jabatan:</strong>
-        <%= @daftar_pegawai.jabatan_id %>
+        <%= @daftar_pegawai.jabatan.nama_jabatan %>
       </p>
 
       <%= link_to 'Edit', edit_daftar_pegawai_path(@daftar_pegawai) %> |

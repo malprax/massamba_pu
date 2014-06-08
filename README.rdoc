@@ -63,6 +63,14 @@ galeri
 organization chart
 gem ckeditor
 
+
+8 juni 2013
+galeri
+organization chart
+coba customize ckeditor
+coba custumoize up and down daftar pegawai berdasarkan pangkat
+
+
 al fatihah
 ayat kursi
 al ikhlas

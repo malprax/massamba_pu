@@ -20,18 +20,18 @@
     <%= f.number_field :nip %>
   </div>
   <div class="field">
-    <%= f.label :pangkat_id %><br>
-    <%= f.text_field :pangkat_id %>
-  </div>
-  <div class="field">
-    <%= f.label :golongan_pangkat, "Golongan" %><br>
-    <%= f.text_field :golongan_pangkat %>
-  </div>
+    <%= f.label :pangkat_id, "Golongan/Pangkat" %><br>    
+    <%= f.collection_select(:pangkat_id, Pangkat.order("created_at asc"), :id, :nama_pangkat)  %>
+  </div> 
   <div class="field">
     <%= f.label :jabatan_id %><br>
-    <%= f.text_field :jabatan_id %>
+    <%= f.collection_select(:jabatan_id, Jabatan.order("created_at asc"), :id, :nama_jabatan)  %>    
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <% if action_name == 'new' %>
+      <%= f.submit "Input Pegawai" %>
+    <% else %>
+      <%= f.submit "Edit Pegawai" %>
+    <% end %>
   </div>
 <% end %>

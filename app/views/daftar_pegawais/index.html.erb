@@ -1,17 +1,17 @@
 <div class="wrap">
-  <div class="container">
+  <%= render 'shared/navigation' %>
+  <div class="container">    
     <div class="row">
       <h3>Daftar Pegawai</h3>
 
-      <p><%= link_to 'Input Pegawai', new_daftar_pegawai_path, class: 'btn' %> </p>
+      <p><%= link_to 'Input Pegawai', new_daftar_pegawai_path, class: "btn btn-primary" %> </p>
 
       <table class="table">
         <thead>
           <tr>
             <th>Nama</th>
             <th>Nip</th>
-            <th>Pangkat</th>
-            <th>Golongan pangkat</th>
+            <th>Pangkat</th>            
             <th>Jabatan</th>           
             <th></th>
             <th></th>
@@ -23,9 +23,8 @@
             <tr>
               <td><%= daftar_pegawai.name %></td>
               <td><%= daftar_pegawai.nip %></td>
-              <td><%= daftar_pegawai.pangkat_id %></td>
-              <td><%= daftar_pegawai.golongan_pangkat %></td>
-              <td><%= daftar_pegawai.jabatan_id %></td>              
+              <td><%= daftar_pegawai.pangkat.nama_pangkat %></td>
+              <td><%= daftar_pegawai.jabatan.nama_jabatan %></td>              
               <td><%= link_to 'Edit', edit_daftar_pegawai_path(daftar_pegawai) %></td>
               <td><%= link_to 'Hapus', daftar_pegawai, method: :delete, data: { confirm: 'Are you sure?' } %></td>
             </tr>

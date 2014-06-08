@@ -42,9 +42,8 @@ ActiveRecord::Schema.define(version: 20140604000312) do
 
   create_table "daftar_pegawais", force: true do |t|
     t.string   "name"
-    t.integer  "nip"
+    t.string   "nip"
     t.string   "pangkat_id"
-    t.string   "golongan_pangkat"
     t.string   "jabatan_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -58,10 +57,12 @@ ActiveRecord::Schema.define(version: 20140604000312) do
   end
 
   create_table "jabatans", force: true do |t|
-    t.string   "name_jabatan"
+    t.string   "nama_jabatan"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "jabatans", ["nama_jabatan"], name: "index_jabatans_on_nama_jabatan", using: :btree
 
   create_table "pages", force: true do |t|
     t.string   "name"
@@ -73,11 +74,12 @@ ActiveRecord::Schema.define(version: 20140604000312) do
   end
 
   create_table "pangkats", force: true do |t|
-    t.string   "golongan"
     t.string   "nama_pangkat"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "pangkats", ["nama_pangkat"], name: "index_pangkats_on_nama_pangkat", using: :btree
 
   create_table "sekilas_infos", force: true do |t|
     t.string   "title"
