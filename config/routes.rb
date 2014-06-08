@@ -30,9 +30,9 @@ MassambaPu::Application.routes.draw do  #get '/pages' => 'page#index'
   get '/suara_rakyat' => 'suara_rakyats#show'
 
   # Info  
-  get '/produk_data' => 'pages#show', :defaults => { :id => '11' } 
-  get '/program_dan_anggaran' => 'pages#show', :defaults => { :id => '13' }
-  get '/proyek_strategis' => 'pages#show', :defaults => { :id => '14' }
+  get '/produk_data' => 'pages#show', :defaults => { :id => '10' } 
+  get '/program_dan_anggaran' => 'pages#show', :defaults => { :id => '11' }
+  get '/proyek_strategis' => 'pages#show', :defaults => { :id => '12' }
   
   # Unit Kerja 
   get '/sekretariat' => 'pages#show', :defaults => { :id => '13' }
