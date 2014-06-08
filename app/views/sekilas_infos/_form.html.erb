@@ -1,7 +1,7 @@
 <%= form_for @sekilas_info, :html => {:honeypot => true} do |f| %>
   <% if @sekilas_info.errors.any? %>
     <div id="error_explanation">
-      <h3><%= pluralize(@sekilas_info.errors.count, "error") %> Tidak Dapat Menyimpan Karena:</h3>
+      <h3><%= pluralize(@sekilas_info.errors.count, "error") %>, dan tidak dapat menyimpan karena:</h3>
 
       <ul>
       <% @sekilas_info.errors.full_messages.each do |msg| %>
