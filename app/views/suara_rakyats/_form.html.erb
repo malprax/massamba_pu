@@ -1,7 +1,7 @@
 <%= form_for @suara_rakyat, :html => {:honeypot => true} do |f| %>
   <% if @suara_rakyat.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@suara_rakyat.errors.count, "error") %> prohibited this suara_rakyat from being saved:</h2>
+      <h3><%= pluralize(@suara_rakyat.errors.count, "error") %> Tidak Dapat Menyimpan Karena:</h3>
 
       <ul>
       <% @suara_rakyat.errors.full_messages.each do |msg| %>
