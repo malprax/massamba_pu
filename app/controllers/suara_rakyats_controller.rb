@@ -1,5 +1,5 @@
 class SuaraRakyatsController < ApplicationController
-  before_action :authenticate_user!, except:[:index, :new, :update]
+  # before_action :authenticate_user!, except: [:new, :update, :index]
   before_action :set_suara_rakyat, only: [:show, :edit, :update, :destroy]
 
   # GET /suara_rakyats

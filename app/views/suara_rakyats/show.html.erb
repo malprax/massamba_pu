@@ -1,11 +1,9 @@
 <div class="container">
   <p id="notice"><%= notice %></p>
-
   <p>
     <strong>Name:</strong>
     <%= @suara_rakyat.name %>
   </p>
-
   <p>
     <strong>Address:</strong>
     <%= @suara_rakyat.address %>
@@ -20,8 +18,11 @@
     <strong>Comment:</strong>
     <%= @suara_rakyat.comment %>
   </p>
- 
+  <% if user_signed_in? %>
   <%= link_to '« Kembali', admin_suara_rakyat_path %> | 
+  <% else %>
+  <%= link_to '« Kembali', suara_rakyats_path %> | 
+  <% end %>
   <%= link_to 'Edit', edit_suara_rakyat_path(@suara_rakyat) %> 
 
   
