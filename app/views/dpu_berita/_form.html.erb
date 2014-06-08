@@ -1,7 +1,7 @@
 <%= form_for @dpu_beritum, :html => {:honeypot => true} do |f| %>
   <% if @dpu_beritum.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@dpu_beritum.errors.count, "error") %> prohibited this dpu_beritum from being saved:</h2>
+      <h3><%= pluralize(@dpu_beritum.errors.count, "error") %> Tidak Dapat Menyimpan Karena:</h3>
 
       <ul>
       <% @dpu_beritum.errors.full_messages.each do |msg| %>
