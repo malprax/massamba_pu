@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-
+  
   def index  
     @dpu_berita = DpuBeritum.all    
     @sekilas_infos = SekilasInfo.terbaru

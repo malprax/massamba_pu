@@ -1,4 +1,5 @@
 class SekilasInfosController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :set_sekilas_info, only: [:show, :edit, :update, :destroy]
 
   # GET /sekilas_infos

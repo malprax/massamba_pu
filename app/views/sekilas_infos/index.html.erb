@@ -1,16 +1,19 @@
-  <%= render "shared/navigation" %>
-  <div class="container">
-
-        <% @sekilas_infos.order("created_at desc").limit(1).each do |sekilas_info| %>
-          <h3><strong><%= sekilas_info.title%></strong></h3>
-          <p><%= simple_format sekilas_info.content %></p>
-        <% end %><br>
+  <div class="wrap">
+    <div class="container">
+           <%= render "shared/navigation" %>
+          <% @sekilas_infos.order("created_at desc").limit(1).each do |sekilas_info| %>
+            <h3><strong><%= sekilas_info.title%></strong></h3>
+            <p><%= simple_format sekilas_info.content %></p>
+          <% end %><br>
         
-       <h4>Sekilas Info Lainnya</h4>
-       <% @sekilas_infos.order("created_at desc").limit(10).offset(1).each do |sekilas_info| %>
-       <p><%= link_to sekilas_info.title, sekilas_info %></p>      
-       <% end %><br>
-  </div>
+         <h4>Sekilas Info Lainnya</h4>
+         <% @sekilas_infos.order("created_at desc").limit(10).offset(1).each do |sekilas_info| %>
+         <p><%= link_to sekilas_info.title, sekilas_info %></p>      
+         <% end %><br>
+    </div>
+  </div> 
+  
+  <%= render 'shared/footer' %>
         
 
 

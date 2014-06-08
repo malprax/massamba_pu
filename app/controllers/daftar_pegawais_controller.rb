@@ -1,4 +1,5 @@
 class DaftarPegawaisController < ApplicationController
+  before_action :authenticate_user!, except: [:index]
   before_action :set_daftar_pegawai, only: [:show, :edit, :update, :destroy]
 
   # GET /daftar_pegawais

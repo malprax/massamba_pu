@@ -4,8 +4,12 @@
     <p id="notice"><%= notice %></p>
     <h3><strong><%= @dpu_beritum.title %></strong></h3>
     <p> <%= simple_format  @dpu_beritum.content %></p>
+    <% if user_signed_in? && params[:edit] %>
     <%= link_to '« Kembali', admin_berita_dpu_path %> |
     <%= link_to 'Edit', edit_dpu_beritum_path(@dpu_beritum) %> 
-    
+    <% else %>
+    <%= link_to '« Kembali', dpu_berita_path %>
+    <% end %>   
+    <hr>    
   </div>  
 </div>

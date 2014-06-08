@@ -1,4 +1,5 @@
 class DpuBeritaController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :set_dpu_beritum, only: [:show, :edit, :update, :destroy]
 
   # GET /dpu_berita

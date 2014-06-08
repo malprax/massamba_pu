@@ -3,12 +3,14 @@
   <div class="container">    
     <p id="notice"><%= notice %></p>
     <h3><strong><%= @sekilas_info.title %></strong></h3>
-    <p> <%= simple_format  @sekilas_info.content %></p>
-    <% if params[:edit] %>
-    <%= link_to '« Kembali', admin_sekilas_info_path %> | 
-    <%= link_to 'Edit', edit_sekilas_info_path(@sekilas_info) %> 
-    <% end %>
-     
+    <p> <%= simple_format  @sekilas_info.content %></p>    
+    <% if user_signed_in? && params[:edit] %>   
+    <%= link_to '« Kembali', admin_sekilas_info_path %> |
+    <%= link_to 'Edit', edit_dpu_beritum_path(@dpu_beritum) %> 
+    <% else %>
+    <%= link_to '« Kembali', sekilas_infos_path %>
+    <% end %>  
+    <hr>     
   </div>  
 </div>
 

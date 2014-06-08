@@ -3,8 +3,9 @@
   <div class="container">    
     <div class="row">
       <h3>Daftar Pegawai</h3>
-
+      <% if params[:edit] %>
       <p><%= link_to 'Input Pegawai', new_daftar_pegawai_path, class: "btn btn-primary" %> </p>
+      <% end %>
 
       <table class="table">
         <thead>
@@ -12,9 +13,11 @@
             <th>Nama</th>
             <th>Nip</th>
             <th>Pangkat</th>            
-            <th>Jabatan</th>           
+            <th>Jabatan</th> 
+            <% if params[:edit] %>          
             <th></th>
             <th></th>
+            <% end %>
           </tr>
         </thead>
 
@@ -24,9 +27,11 @@
               <td><%= daftar_pegawai.name %></td>
               <td><%= daftar_pegawai.nip %></td>
               <td><%= daftar_pegawai.pangkat.nama_pangkat %></td>
-              <td><%= daftar_pegawai.jabatan.nama_jabatan %></td>              
+              <td><%= daftar_pegawai.jabatan.nama_jabatan %></td>   
+              <% if params[:edit] %>           
               <td><%= link_to 'Edit', edit_daftar_pegawai_path(daftar_pegawai) %></td>
               <td><%= link_to 'Hapus', daftar_pegawai, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <% end %>
             </tr>
           <% end %>
         </tbody>
