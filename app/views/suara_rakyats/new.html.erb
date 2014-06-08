@@ -5,7 +5,11 @@
       <div class="span8">
         <h3>Buat Suara Rakyat</h3>
         <%= render 'form' %>
-        <%= link_to '« Kembali', admin_suara_rakyat_path %>      
+        <% if user_signed_in? %>
+            <%= link_to '« Kembali', admin_suara_rakyat_path %>   
+        <% else %>
+            <%= link_to '« Kembali', root_url %>        
+        <% end %>
       </div>      
     </div>
   </div>
