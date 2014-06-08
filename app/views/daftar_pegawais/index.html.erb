@@ -1,35 +1,42 @@
-<h1>Listing daftar_pegawais</h1>
+<div class="wrap">
+  <div class="container">
+    <div class="row">
+      <h3>Daftar Pegawai</h3>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Nip</th>
-      <th>Pangkat</th>
-      <th>Golongan pangkat</th>
-      <th>Jabatan</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+      <p><%= link_to 'Input Pegawai', new_daftar_pegawai_path, class: 'btn' %> </p>
 
-  <tbody>
-    <% @daftar_pegawais.each do |daftar_pegawai| %>
-      <tr>
-        <td><%= daftar_pegawai.name %></td>
-        <td><%= daftar_pegawai.nip %></td>
-        <td><%= daftar_pegawai.pangkat_id %></td>
-        <td><%= daftar_pegawai.golongan_pangkat %></td>
-        <td><%= daftar_pegawai.jabatan_id %></td>
-        <td><%= link_to 'Show', daftar_pegawai %></td>
-        <td><%= link_to 'Edit', edit_daftar_pegawai_path(daftar_pegawai) %></td>
-        <td><%= link_to 'Destroy', daftar_pegawai, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Nama</th>
+            <th>Nip</th>
+            <th>Pangkat</th>
+            <th>Golongan pangkat</th>
+            <th>Jabatan</th>           
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
 
-<br>
+        <tbody>
+          <% @daftar_pegawais.each do |daftar_pegawai| %>
+            <tr>
+              <td><%= daftar_pegawai.name %></td>
+              <td><%= daftar_pegawai.nip %></td>
+              <td><%= daftar_pegawai.pangkat_id %></td>
+              <td><%= daftar_pegawai.golongan_pangkat %></td>
+              <td><%= daftar_pegawai.jabatan_id %></td>              
+              <td><%= link_to 'Edit', edit_daftar_pegawai_path(daftar_pegawai) %></td>
+              <td><%= link_to 'Hapus', daftar_pegawai, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
 
-<%= link_to 'New Daftar pegawai', new_daftar_pegawai_path %>
+     
+
+      
+    </div>
+  </div>
+</div>
+

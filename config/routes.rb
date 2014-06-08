@@ -8,8 +8,7 @@ MassambaPu::Application.routes.draw do  #get '/pages' => 'page#index'
   get '/admin_suara_rakyat' => 'admin#admin_suara_rakyat'
   resources :suara_rakyats
   resources :dpu_berita
-  
-  
+  resources :daftar_pegawais
   resources :sekilas_infos
   resources :pages
 
@@ -23,7 +22,7 @@ MassambaPu::Application.routes.draw do  #get '/pages' => 'page#index'
    get '/struktur_organisasi' => 'pages#show', :defaults => { :id => '3' }
    get '/tugas_pokok_dan_fungsi' => 'pages#show', :defaults => { :id => '4' }
    get '/visi_dan_misi' => 'pages#show', :defaults => { :id => '5' }
-   get '/pegawai' => 'pages#show', :defaults => { :id => '6' }
+   get '/pegawai' => 'daftar_pegawais#index'
  
  # Berita
   # get '/berita_dpu' => 'dpu_berita#show'
