@@ -6,7 +6,7 @@
           <div class="page-header">
             <h1><%= @page.name %></h1>
           </div>
-          <p class="lead">raw <%= @page.content %></p>          
+          <p class="lead"><%= raw(@page.content) %></p>          
         </div>
 
         <div id="push">
