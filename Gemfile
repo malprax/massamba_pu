@@ -110,6 +110,10 @@ gem 'non-stupid-digest-assets', '~> 1.0.4'
 #to-add_sortable position in columns
 gem 'acts_as_list'
 
+#cache
+gem 'memcachier'
+gem 'dalli'
+
 
 #enable all platform features
 group :production do

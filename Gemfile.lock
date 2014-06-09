@@ -75,6 +75,7 @@ GEM
       execjs
     coffee-script-source (1.7.0)
     commonjs (0.2.7)
+    dalli (2.7.2)
     devise (3.2.4)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -126,6 +127,7 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    memcachier (0.0.2)
     mime-types (1.25.1)
     mini_magick (3.7.0)
       subexec (~> 0.2.1)
@@ -231,6 +233,7 @@ DEPENDENCIES
   ckeditor
   coderay
   coffee-rails (~> 4.0.0)
+  dalli
   devise
   fog
   geocoder
@@ -240,6 +243,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   less-rails
+  memcachier
   mini_magick
   non-stupid-digest-assets (~> 1.0.4)
   paperclip!
