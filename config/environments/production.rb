@@ -80,14 +80,14 @@ MassambaPu::Application.configure do
   
   
   #send_confirmation_email
-  config.action_mailer.default_url_options = {:host => 'fierce-scrubland-6539.herokuapp.com'}
+  config.action_mailer.default_url_options = {:host => 'dpulutra.com'}
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.perform_deliveries = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address: "smtp.gmail.com",
     port: 587,
-    domain: "fierce-scrubland-6539.herokuapp.com",
+    domain: "heroku.com",
     authentication: :login,
     enable_starttls_auto: true,
     user_name: 'kingmalprax@gmail.com',
