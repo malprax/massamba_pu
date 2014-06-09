@@ -20,6 +20,7 @@ MassambaPu::Application.configure do
   config.action_mailer.smtp_settings = {
    address: "smtp.gmail.com",
    port: "587",
+   domain:"massamba_pu.dev",
    authentication: :login,
    enable_starttls_auto: true,
    user_name: 'kingmalprax@gmail.com',
