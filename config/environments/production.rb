@@ -81,12 +81,12 @@ MassambaPu::Application.configure do
   
   config.action_mailer.default_url_options = {:host => "fierce-scrubland-6539.herokuapp.com"}
   ActionMailer::Base.smtp_settings = {
-      :address        => 'smtp.gmail.com',
+      :address        => 'smtp.sendgrid.net',
       :port           => '587',
       :authentication => :plain,
-      :user_name      => 'kingmalprax@gmail.com',
-      :password       => '@1603auRIS',
-      :domain         => 'fierce-scrubland-6539.herokuapp.com',
+      :user_name      => ENV['SENDGRID_USERNAME'],
+      :password       => ENV['SENDGRID_PASSWORD'],
+      :domain         => 'heroku.com',
       :enable_starttls_auto => true
     }
   
@@ -98,4 +98,11 @@ MassambaPu::Application.configure do
 #     :port    => 25,
 #     :domain  => 'yourdomain.com'
 #   }
+
+MassambaPu::Application.config.middleware.use ExceptionNotification::Rack,
+  :email => {
+    :email_prefix => "Massamba errors",
+    :sender_address => %{"notifier" <notifier@dpulutra.com>},
+    :exception_recipients => %w{kingmalprax@@gmail.com, sulfadly09@gmail.com}
+  }
 end
