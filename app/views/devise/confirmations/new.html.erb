@@ -1,17 +1,20 @@
 <div class="container">
   <div class="row">
-    <h3>Resend confirmation instructions</h3>
+    <div class="span12">
+      <h3>Resend confirmation instructions</h3>
 
-    <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
-      <%= devise_error_messages! %>
+      <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+        <%= devise_error_messages! %>
 
-      <div><%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true %></div>
+        <div><%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true %></div>
 
-      <div><%= f.submit "Kirim Petunjuk Konfirmasi" %></div>
-    <% end %>
+        <div><%= f.submit "Kirim Petunjuk Konfirmasi" %></div>
+      <% end %>
 
-    <%= render "devise/shared/links" %>
+      <%= render "devise/shared/links" %>
+    </div>
+    
     
   </div>
 </div>

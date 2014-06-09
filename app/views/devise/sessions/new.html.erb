@@ -1,10 +1,9 @@
 <div class="container">
-  <div class="row">
-    <div class="span4"></div>
-    <div class="span4"> 
+  <div class="row">   
+    <div class="span12"> 
         <hr>
         <hr>
-        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name), html:{honeypot: true}) do |f| %>
           <%= devise_error_messages! %>
           <div><%= f.label :email %><br />
           <%= f.email_field :email, autofocus: true %></div>
@@ -21,9 +20,7 @@
 
         <%= render "devise/shared/links" %>
         <%= link_to "Kembali ke Beranda »", root_url %>     
-      
-    </div>
-    <div class="span4"></div>
+    </div>    
   </div>
 </div>
 
