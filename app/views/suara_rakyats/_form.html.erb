@@ -28,6 +28,6 @@
     <%= f.text_area :comment %>
   </div>
   <div class="actions">
-    <%= action_name == "new"? (f.submit "Buat Suara Anda") : (f.submit "Update Suara Anda")  %>
+    <%= action_name == "new"? (f.submit "Buat Suara",class:'btn btn-primary') : (f.submit "Update Suara", class:'btn btn-primary')  %>
   </div>
 <% end %>
