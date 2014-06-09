@@ -1,4 +1,14 @@
-<h2>Resend unlock instructions</h2>
+<div class="wrap">
+  <div class="container">
+    <div class="row">
+      <div class="span4"></div>
+      <div class="span4"></div>
+      <div class="span4"></div>
+    </div>
+  </div>
+</div>
+
+<h3>Kirim ulang petunjuk membuka kunci</h3>
 
 <%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post, honeypot: true }) do |f| %>
   <%= devise_error_messages! %>

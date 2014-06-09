@@ -1,34 +1,43 @@
-<div class="container">
-  <div class="row">
-    <h3>Edit <%= resource_name.to_s.humanize %></h3>
+<div class="wrap">
+  <div class="container">
+    <div class="row">
+      <div class="span4"></div>
+      <div class="span4">
+          <h3>Edit <%= resource_name.to_s.humanize %></h3>
 
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, honeypot: true }) do |f| %>
-      <%= devise_error_messages! %>
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, honeypot: true }) do |f| %>
+          <%= devise_error_messages! %>
 
-      <div><%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true %></div>
+          <div><%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true %></div>
 
-      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-      <% end %>
+          <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+            <div>Sekarang menunggu konfirmasi untuk: <%= resource.unconfirmed_email %></div>
+          <% end %>
 
-      <div><%= f.label :password %> <i>(biarkan kosong jika anda tidak ingin menggantinya)</i><br />
-        <%= f.password_field :password, autocomplete: "off" %></div>
+          <div><%= f.label :password %> <i>(biarkan kosong jika anda tidak ingin menggantinya)</i><br />
+            <%= f.password_field :password, autocomplete: "off" %></div>
 
-      <div><%= f.label :password_confirmation, "Konfirmasi Password" %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+          <div><%= f.label :password_confirmation, "Konfirmasi Password" %><br />
+            <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
 
-      <div><%= f.label :current_password, "Password Sekarang Yang Mau Di ganti" %> <i>(kami butuh password anda yang sekarang untuk konfirmasi penggantian password</i><br />
-        <%= f.password_field :current_password, autocomplete: "off" %></div>
+          <div><%= f.label :current_password, "Password Sekarang Yang Mau Di ganti" %> <i>(kami butuh password anda yang sekarang untuk konfirmasi penggantian password</i><br />
+            <%= f.password_field :current_password, autocomplete: "off" %></div>
 
-      <div><%= f.submit "Update", class:'btn btn-primary' %></div>
-    <% end %>
+          <div><%= f.submit "Update", class:'btn btn-primary' %></div>
+        <% end %>
 
-    <h3>Batalkan Akun Saya</h3>
+        <h3>Batalkan Akun Saya</h3>
 
-    <p>Tidak Suka Website Ini? <%= button_to "Hapus Akun Saya", registration_path(resource_name), data: { confirm: "Anda Yakin?" }, method: :delete, class: 'btn btn-primary' %></p>
+        <p>Tidak Suka Website Ini? <%= button_to "Hapus Akun Saya", registration_path(resource_name), data: { confirm: "Anda Yakin?" }, method: :delete, class: 'btn btn-primary' %></p>
 
-    <%= link_to "Kembali", :back %>
-    
+        <%= link_to "« Kembali", :back %>
+        
+      </div>
+      <div class="span4"></div>
+    </div>
   </div>
 </div>
+
+
+    
