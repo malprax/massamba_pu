@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <h2>Edit <%= resource_name.to_s.humanize %></h2>
+    <h3>Edit <%= resource_name.to_s.humanize %></h3>
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, honeypot: true }) do |f| %>
       <%= devise_error_messages! %>
@@ -12,23 +12,23 @@
         <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
       <% end %>
 
-      <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+      <div><%= f.label :password %> <i>(biarkan kosong jika anda tidak ingin menggantinya)</i><br />
         <%= f.password_field :password, autocomplete: "off" %></div>
 
-      <div><%= f.label :password_confirmation %><br />
+      <div><%= f.label :password_confirmation, "Konfirmasi Password" %><br />
         <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
 
-      <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+      <div><%= f.label :current_password, "Password Sekarang Yang Mau Di ganti" %> <i>(kami butuh password anda yang sekarang untuk konfirmasi penggantian password</i><br />
         <%= f.password_field :current_password, autocomplete: "off" %></div>
 
-      <div><%= f.submit "Update" %></div>
+      <div><%= f.submit "Update", class:'btn btn-primary' %></div>
     <% end %>
 
-    <h3>Cancel my account</h3>
+    <h3>Batalkan Akun Saya</h3>
 
-    <p>Unhappy? <%= button_to "Hapus Akun Saya", registration_path(resource_name), data: { confirm: "Anda Yakin?" }, method: :delete %></p>
+    <p>Tidak Suka Website Ini? <%= button_to "Hapus Akun Saya", registration_path(resource_name), data: { confirm: "Anda Yakin?" }, method: :delete, class: 'btn btn-primary' %></p>
 
-    <%= link_to "Back", :back %>
+    <%= link_to "Kembali", :back %>
     
   </div>
 </div>
