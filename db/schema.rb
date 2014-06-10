@@ -11,10 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140604000312) do
+ActiveRecord::Schema.define(version: 20140610161158) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "albums", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
 
   create_table "categori_suaras", force: true do |t|
     t.string   "jenis_suara"
@@ -47,11 +57,18 @@ ActiveRecord::Schema.define(version: 20140604000312) do
     t.string   "jabatan_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "position"
   end
 
   create_table "dpu_berita", force: true do |t|
     t.string   "title"
     t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "galeries", force: true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -80,6 +97,11 @@ ActiveRecord::Schema.define(version: 20140604000312) do
   end
 
   add_index "pangkats", ["nama_pangkat"], name: "index_pangkats_on_nama_pangkat", using: :btree
+
+  create_table "pegawai_lists", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "sekilas_infos", force: true do |t|
     t.string   "title"

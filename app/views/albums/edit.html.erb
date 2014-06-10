@@ -1,0 +1,16 @@
+<div class ="wrap">
+  <%= render 'shared/navigation' %>
+  <div class="container">
+    <div class="row">      
+      <div class="span12">
+        <h3>Editing album</h3>
+
+        <%= render 'form' %>
+
+        <%= link_to 'Show', @album %> |
+        <%= link_to 'Back', albums_path %>
+        
+      </div>      
+    </div>
+  </div>
+</div>

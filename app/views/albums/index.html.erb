@@ -1,0 +1,37 @@
+<div class ="wrap">
+  <%= render "shared/navigation" %>
+  <div class="container">
+    <div class="row">      
+      <div class="span12">
+        <h3>Daftar Album</h3>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Nama</th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% @albums.each do |album| %>
+              <tr>
+                <td><%= link_to album.name, album %></td>       
+                <td><%= link_to 'Edit', edit_album_path(album) %></td>
+                <td><%= link_to 'Hapus', album, method: :delete, data: { confirm: 'Anda Yakin?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+
+        <br>
+
+        <%= link_to 'Buat Album', new_album_path %>
+        
+      </div>      
+    </div>
+  </div>
+</div>
+
