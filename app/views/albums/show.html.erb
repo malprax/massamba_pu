@@ -8,7 +8,7 @@
         <p>
           <strong>Name:</strong>
           <%= @album.name %>
-          <%= image_tag @album.image.url %>
+          <%= image_tag @album.image %>
         </p>
 
         <%= link_to 'Edit', edit_album_path(@album) %> |

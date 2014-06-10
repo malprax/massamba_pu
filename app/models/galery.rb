@@ -1,3 +1,3 @@
 class Galery < ActiveRecord::Base
-  has_many :image, dependent: :destroy
+  has_many :albums, dependent: :destroy
 end
