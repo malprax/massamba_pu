@@ -1,31 +1,41 @@
-<div class ="wrap">
-  <%= render "shared/navigation" %>
-  <div class="container">
-    <div class="row">      
-      <div class="span12">
-        <div class="row">
-          <div class="field">
-            <%= link_to 'Tambah Foto', new_album_path, class: 'btn btn-primary' %>
-          </div> 
-          <hr>  
-       
-              <% @albums.each do |album| %>
-              <div class="span4">
-                <div class="thumbnail">         
-                    <%= link_to album.name,album %>                      
-                    <%= link_to 'Edit', edit_album_path(album) %> |
-                    <%= link_to 'Hapus', album, method: :delete, data: { confirm: 'Anda Yakin?' } %> 
-                </div>
-              </div> 
+   <div class ="wrap">
+     <%= render "shared/navigation" %>
+     <div class="container">
+       <div class="row-fluid">      
+         <div class="span12">
+           <div class="row">
+             <div class="field">
+               <%= link_to 'Tambah Foto', new_album_path, class: 'btn btn-primary' %>
+             </div> 
+             <hr>  
+                 <ul class="thumbnails">
+                 <% @albums.each do |album| %>           
+                   <li class="span4"> 
+                     <div class="thumbnail">
+                       <%= image_tag album.image.url %>                    
+                       <div class="caption">
+                         <center>
+                           <h4><%= link_to album.name,album %></h4>
+                           <p>Keterangan</p>
+                           <p>
+                             <%= link_to 'Edit', edit_album_path(album), class:'btn' %> 
+                             <%= link_to 'Hapus', album, method: :delete, data: { confirm: 'Anda Yakin?' }, class:'btn' %>
+                           </p>
+                         </center>                      
+                       </div>                      
                     
-              <% end %>              
-        </div> 
-        <div class="field">
-          <%= link_to '« Kembali', galleries_path %>
-        </div>    
+                     </div>                 
+                   </li>                 
+                 <% end %> 
+                  </ul>              
+           </div> 
+           <div class="field">
+             <%= link_to '« Kembali', galleries_path %>
+           </div>    
        
-      </div>      
-    </div>
-  </div>
-</div>
+         </div>      
+       </div>
+     </div>
+   </div>
 
+   

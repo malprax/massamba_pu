@@ -1,28 +1,30 @@
+   <%= form_for @album, html: {multipart: true, honeypot: true} do |f| %>
+     <% if @album.errors.any? %>
+       <div id="error_explanation">
+         <h2><%= pluralize(@album.errors.count, "error") %> prohibited this album from being saved:</h2>
 
-         <%= form_for @album, html: {multipart: true, honeypot: true} do |f| %>
-           <% if @album.errors.any? %>
-             <div id="error_explanation">
-               <h2><%= pluralize(@album.errors.count, "error") %> prohibited this album from being saved:</h2>
-
-               <ul>
-               <% @album.errors.full_messages.each do |msg| %>
-                 <li><%= msg %></li>
-               <% end %>
-               </ul>
-             </div>
-           <% end %>
-
-           <div class="field">
-             <%= f.label :name, "Nama" %><br>
-             <%= f.text_field :name %>
-           </div>
-  
-           <div class="field">             
-             <%= f.file_field :image %>
-           </div>
-  
-           <div class="actions">
-             <%= f.submit "Upload Gambar", class: "btn btn-primary" %>
-           </div>
+         <ul>
+         <% @album.errors.full_messages.each do |msg| %>
+           <li><%= msg %></li>
          <% end %>
-     
+         </ul>
+       </div>
+     <% end %>
+
+     <div class="field">
+       <%= f.label :name, "Judul Gambar" %><br>
+       <%= f.text_field :name %>
+     </div>
+
+     <div class="field">             
+       <%= f.file_field :image %>
+     </div>
+
+     <div class="actions">
+       <% if action_name == 'new' %>
+       <%= f.submit "Upload Gambar", class: "btn btn-primary" %>
+       <% else action_name == 'edit' %>
+       <%= f.submit "Ulangi Upload", class: "btn btn-primary" %>
+       <% end %>
+     </div>
+   <% end %>
