@@ -28,8 +28,8 @@ class GaleriesController < ApplicationController
 
     respond_to do |format|
       if @galery.save
-        format.html { redirect_to @galery, notice: 'Galery was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @galery }
+        format.html { redirect_to galeries_path, notice: 'Galery was successfully created.' }
+        format.json { render action: 'index', status: :created, location: @galery }
       else
         format.html { render action: 'new' }
         format.json { render json: @galery.errors, status: :unprocessable_entity }
@@ -42,7 +42,7 @@ class GaleriesController < ApplicationController
   def update
     respond_to do |format|
       if @galery.update(galery_params)
-        format.html { redirect_to @galery, notice: 'Galery was successfully updated.' }
+        format.html { redirect_to galeries_path, notice: 'Galery was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

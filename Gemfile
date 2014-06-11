@@ -73,9 +73,9 @@ gem 'cancan'
 gem 'puma'
 
 #cloudfolder
-gem 'paperclip', :git => "git://github.com/thoughtbot/paperclip.git"
+# gem 'paperclip', :git => "git://github.com/thoughtbot/paperclip.git"
 gem 'paperclip-dropbox'
-gem 'dropbox'
+# gem 'dropbox'
 # gem 'cocaine'
 # gem 'dropbox-sdk'
 

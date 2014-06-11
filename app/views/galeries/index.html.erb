@@ -1,27 +1,31 @@
-<h1>Listing galeries</h1>
+<div class ="wrap">
+  <%= render 'shared/navigation' %>
+  <div class = "container">
+    <div class = "row">
+      <div class = "span12">
+        <h3>Galeri Foto</h3>
+        <p><%= link_to 'New Galery', new_galery_path, class: 'btn btn-primary' %></p>
+        <hr>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Galeri</th>              
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @galeries.each do |galery| %>
-      <tr>
-        <td><%= galery.name %></td>
-        <td><%= link_to 'Show', galery %></td>
-        <td><%= link_to 'Edit', edit_galery_path(galery) %></td>
-        <td><%= link_to 'Destroy', galery, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Galery', new_galery_path %>
+          <tbody>
+            <% @galeries.each do |galery| %>
+              <tr>
+                <td><%= link_to galery.name, galery_albums_path(galery) %></td>                
+                <td><%= link_to 'Edit', edit_galery_path(galery) %></td>
+                <td><%= link_to 'Hapus', galery, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>       
+      </div>
+    </div>
+  </div>
+</div>

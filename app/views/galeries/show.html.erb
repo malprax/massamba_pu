@@ -1,9 +1,20 @@
-<p id="notice"><%= notice %></p>
+<div class="wrap">
+  <%= render 'shared/navigation' %>
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+        <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @galery.name %>
-</p>
+        <p>
+          <strong>Name:</strong>
+          <%= @galery.name %>
+        </p>
 
-<%= link_to 'Edit', edit_galery_path(@galery) %> |
-<%= link_to 'Back', galeries_path %>
+        <%= link_to 'Edit', edit_galery_path(@galery) %> |
+        <%= link_to 'Back', galeries_path %>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
