@@ -34,7 +34,8 @@ MassambaPu::Application.routes.draw do  #get '/pages' => 'page#index'
   get '/sekilas_info' => 'sekilas_info#show'
   get '/suara_rakyat' => 'suara_rakyats#show'
 
-  # Info  
+  # Info 
+  get 'galeri_foto' => 'galeries#index'
   get '/produk_data' => 'pages#show', :defaults => { :id => '10' } 
   get '/program_dan_anggaran' => 'pages#show', :defaults => { :id => '11' }
   get '/proyek_strategis' => 'pages#show', :defaults => { :id => '12' }
