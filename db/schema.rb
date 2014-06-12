@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 20140611221744) do
     t.integer  "galery_id"
   end
 
+  add_index "albums", ["galery_id"], name: "index_albums_on_galery_id", using: :btree
+
   create_table "categori_suaras", force: true do |t|
     t.string   "jenis_suara"
     t.datetime "created_at"

@@ -1,4 +1,4 @@
-   <%= form_for [@galery,@album]  do |f| %>
+   <%= form_for [@galery,@album] do |f| %>
      <% if @album.errors.any? %>
        <div id="error_explanation">
          <h2><%= pluralize(@album.errors.count, "error") %> prohibited this album from being saved:</h2>
@@ -10,7 +10,7 @@
          </ul>
        </div>
      <% end %>
-
+     <%= f.hidden_field :galery_id %> 
      <div class="field">
        <%= f.label :name, "Judul Gambar" %><br>
        <%= f.text_field :name %>
