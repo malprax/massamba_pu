@@ -1,5 +1,5 @@
 class Album < ActiveRecord::Base
-  belongs_to :gallery   
+  belongs_to :galery 
   has_attached_file  :image,
  #                     :storage => :dropbox, 
  #                     :dropbox_credentials => "#{Rails.root}/config/dropbox.yml",

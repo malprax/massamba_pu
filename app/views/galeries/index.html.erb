@@ -18,7 +18,7 @@
           <tbody>
             <% @galeries.each do |galery| %>
               <tr>
-                <td><%= link_to galery.name, galery_albums_path(galery) %></td>                
+                <td><%= link_to galery.name, galery_albums_path(galery, @album) %></td>                
                 <td><%= link_to 'Edit', edit_galery_path(galery) %></td>
                 <td><%= link_to 'Hapus', galery, method: :delete, data: { confirm: 'Are you sure?' } %></td>
               </tr>
