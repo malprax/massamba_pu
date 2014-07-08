@@ -6,7 +6,7 @@
        <div class="row">
          <div class="field">
            <p><h3><%= @galery.name %></h3></p>
-           <% if user_signed_in? && params[:new] %>
+           <% if user_signed_in? %>
            <p><%= link_to 'Tambah Foto', new_galery_album_path(:galery_id => @galery), class: 'btn btn-primary' %></p>
            <% end %>
          </div> 
@@ -19,10 +19,12 @@
                    <div class="caption">
                      <center>                         
                        <p><%= album.name %></p>
+                       <% if user_signed_in? %>
                        <p>
                          <%= link_to 'Edit', edit_galery_album_path(@galery, album), class:'btn' %> 
                          <%= link_to 'Hapus', galery_album_path(@galery, album), method: :delete, data: { confirm: 'Anda Yakin?' }, class:'btn' %>
                        </p>
+                       <% end %>
                      </center>                      
                    </div>                      
                 
