@@ -4,36 +4,39 @@ class AlbumsController < ApplicationController
 
   # GET /albums
   # GET /albums.json
-  # def index     
-#     @albums = Album.all
-#   end
+  def index
+    @galery = Galery.find(params[:galery_id])
+    @albums = @galery.albums
+  end
 
   # GET /albums/1
   # GET /albums/1.json
-  def show     
-    
+  def show 
+    @galery = Galery.find(params[:galery_id])    
+    @album = @galery.albums.find(params[:id])
   end
 
   # GET /albums/new
-  def new
-    @galery = Galery.find(params[:galery_id])     
-    @album = @galery.albums.new
+  def new  
+    @galery = Galery.find(params[:galery_id])   
+    @album = @galery.albums.build
   end
 
   # GET /albums/1/edit
-  def edit
-    @galery = Galery.find(params[:id])
+  def edit   
+    @galery = Galery.find(params[:galery_id]) 
     @album = @galery.albums.find(params[:id])  
   end
 
   # POST /albums
   # POST /albums.json
-  def create    
-    @album = Album.create(album_params)
+  def create
+    @galery = Galery.find(params[:galery_id])     
+    @album = @galery.albums.create(album_params)
 
     respond_to do |format|
       if @album.save
-        format.html { redirect_to @album.galery, notice: 'Album was successfully created.' }
+        format.html { redirect_to [@album.galery, @album], notice: 'Album was successfully created.' }
         # format.json { render action: 'show', status: :created, location: @album }
       else
         format.html { render action: 'new' }
@@ -44,11 +47,12 @@ class AlbumsController < ApplicationController
 
   # PATCH/PUT /albums/1
   # PATCH/PUT /albums/1.json
-  def update  
-    @album = Album.find(params[:id])      
+  def update 
+    @galery = Galery.find(params[:galery_id])      
+    @album = @galery.albums.find(params[:id])      
     respond_to do |format|
       if @album.update(album_params)
-        format.html { redirect_to @painting.galery, notice: 'Album was successfully updated.' }
+        format.html { redirect_to [@album.galery, @album], notice: 'Album was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -60,7 +64,8 @@ class AlbumsController < ApplicationController
   # DELETE /albums/1
   # DELETE /albums/1.json
   def destroy 
-    @album = Album.find(params[:id])            
+    @galery = Galery.find(params[:galery_id])
+    @album = @galery.albums.find(params[:id])            
     @album.destroy
     respond_to do |format|
       format.html { redirect_to @album.galery }
@@ -71,11 +76,11 @@ class AlbumsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     # def set_galery
-#        @galery = Galery.find(params[:galery_id])
+#         @galery = Galery.find(params[:galery_id])
 #     end
-#     def set_album
-#       @album = @galery.albums.find(params[:id])
-#     end
+    # def set_album
+ #       @album = Album.find(params[:id])
+ #    end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def album_params

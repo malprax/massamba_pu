@@ -17,6 +17,7 @@ class GaleriesController < ApplicationController
   # GET /galeries/new
   def new
     @galery = Galery.new
+    @galery.albums.build
   end
 
   # GET /galeries/1/edit
@@ -71,6 +72,6 @@ class GaleriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def galery_params
-      params.require(:galery).permit(:name, :album_id)
+      params.require(:galery).permit(:name, albums_attributes: [:id, :name, :image])
     end
 end

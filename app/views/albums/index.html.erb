@@ -17,7 +17,7 @@
                          <center>                         
                            <p><%= album.name %></p>
                            <p>
-                             <%#= link_to 'Edit', edit_galery_albums_path(@galery, album), class:'btn' %> 
+                             <%= link_to 'Edit', edit_galery_album_path(@galery, album), class:'btn' %> 
                              <%= link_to 'Hapus', galery_album_path(@galery,album), method: :delete, data: { confirm: 'Anda Yakin?' }, class:'btn' %>
                            </p>
                          </center>                      

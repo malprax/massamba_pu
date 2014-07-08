@@ -1,4 +1,4 @@
 class Galery < ActiveRecord::Base
   has_many :albums, dependent: :destroy  
-  accepts_nested_attributes_for :albums
+  accepts_nested_attributes_for :albums, allow_destroy: true
 end
