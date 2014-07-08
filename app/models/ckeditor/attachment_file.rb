@@ -1,8 +1,8 @@
 class Ckeditor::AttachmentFile < Ckeditor::Asset
   has_attached_file :data,
                     :storage => :dropbox,
-                    :dropbox_credentials => Rails.root.join("config/dropbox.yml")
-                    :dropbox_visibility => 'public'
+                    :dropbox_credentials => Rails.root.join("config/dropbox.yml"),
+                    :dropbox_visibility => 'public',
                     :url => "/ckeditor_assets/attachments/:id/:filename",
                     :path => ":rails_root/public/ckeditor_assets/attachments/:id/:filename"
 
