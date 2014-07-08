@@ -3,13 +3,15 @@
   <div class = "container">
     <div class = "row">
       <div class = "span12">
-        <h3>Galeri Foto</h3>
+        
+        <% if user_signed_in? && params[:new] %>
         <p><%= link_to 'Tambah Galeri', new_galery_path, class: 'btn btn-primary' %></p>
         <hr>
+        <% end %>
         <table class="table">
           <thead>
             <tr>
-              <th>Galeri</th>              
+              <th><h3>Galeri Foto</h3></th>              
               <th></th>
               <th></th>
             </tr>
@@ -18,9 +20,11 @@
           <tbody>
             <% @galeries.each do |galery| %>
               <tr>
-                <td><%= link_to galery.name, galery %></td>                
+                <td><%= link_to galery.name, galery %></td> 
+                <% if user_signed_in? && params[:edit] %>               
                 <td><%= link_to 'Edit', edit_galery_path(galery) %></td>
                 <td><%= link_to 'Hapus', galery, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <% end %>
               </tr>
             <% end %>
           </tbody>

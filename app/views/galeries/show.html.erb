@@ -5,8 +5,10 @@
      <div class="span12">
        <div class="row">
          <div class="field">
-           <p><%= @galery.name %></p>
+           <p><h3><%= @galery.name %></h3></p>
+           <% if user_signed_in? && params[:new] %>
            <p><%= link_to 'Tambah Foto', new_galery_album_path(:galery_id => @galery), class: 'btn btn-primary' %></p>
+           <% end %>
          </div> 
          <hr>  
              <ul class="thumbnails">

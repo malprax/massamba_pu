@@ -36,8 +36,9 @@ class AlbumsController < ApplicationController
 
     respond_to do |format|
       if @album.save
-        format.html { redirect_to [@album.galery, @album], notice: 'Album was successfully created.' }
-        # format.json { render action: 'show', status: :created, location: @album }
+        format.html { redirect_to galery_albums_path, notice: 'Album berhasil dibuat.' }
+        #format.html { redirect_to [@album.galery, @album], notice: 'Album berhasil dibuat.' }
+         format.json { render action: 'index', status: :created, location: @album }
       else
         format.html { render action: 'new' }
         # format.json { render json: @album.errors, status: :unprocessable_entity }
@@ -52,7 +53,8 @@ class AlbumsController < ApplicationController
     @album = @galery.albums.find(params[:id])      
     respond_to do |format|
       if @album.update(album_params)
-        format.html { redirect_to [@album.galery, @album], notice: 'Album was successfully updated.' }
+        format.html { redirect_to [@album.galery, @album], notice: 'Album berhasil di update.' }
+        #format.html { redirect_to [@album.galery, @album], notice: 'Album berhasil dibuat.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

@@ -1,4 +1,5 @@
 class GaleriesController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :set_galery, only: [:show, :edit, :update, :destroy]
 
   # GET /galeries
@@ -31,7 +32,7 @@ class GaleriesController < ApplicationController
 
     respond_to do |format|
       if @galery.save
-        format.html { redirect_to galeries_path, notice: 'Galery was successfully created.' }
+        format.html { redirect_to galeries_path, notice: 'Galery berhasil dibuat.' }
         format.json { render action: 'index', status: :created, location: @galery }
       else
         format.html { render action: 'new' }
@@ -45,7 +46,7 @@ class GaleriesController < ApplicationController
   def update
     respond_to do |format|
       if @galery.update(galery_params)
-        format.html { redirect_to galeries_path, notice: 'Galery was successfully updated.' }
+        format.html { redirect_to galeries_path, notice: 'Galery Berhasil di update.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
