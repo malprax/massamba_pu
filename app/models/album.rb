@@ -4,7 +4,7 @@ class Album < ActiveRecord::Base
                      :storage => :dropbox,
                      :dropbox_credentials => "#{Rails.root}/config/dropbox.yml",                    
                       styles: { :medium => "300x300>"},
-                     :default_url => "/images/:style/missing.png", 
+                     # :default_url => "/images/:style/missing.png", 
                      :dropbox_visibility => 'public',                    
                      :dropbox_options => {
                            :path => proc { |style| "#{style}/#{id}_#{image.original_filename}" }
