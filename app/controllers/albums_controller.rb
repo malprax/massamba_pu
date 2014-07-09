@@ -1,6 +1,5 @@
 class AlbumsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
-  before_action :set_album, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]  
   before_action :set_galery, only: [:index, :show, :new, :edit, :create, :update, :destroy]
 
   # GET /albums
@@ -12,7 +11,7 @@ class AlbumsController < ApplicationController
   # GET /albums/1
   # GET /albums/1.json
   def show    
-   
+    @album = @galery.albums.find(params[:id])
   end
 
   # GET /albums/new
@@ -22,7 +21,7 @@ class AlbumsController < ApplicationController
 
   # GET /albums/1/edit
   def edit      
-    
+    @album = @galery.albums.find(params[:id])
   end
 
   # POST /albums
@@ -44,7 +43,7 @@ class AlbumsController < ApplicationController
   # PATCH/PUT /albums/1
   # PATCH/PUT /albums/1.json
   def update     
-       
+    @album = @galery.albums.find(params[:id])   
     respond_to do |format|
       if @album.update(album_params)
         format.html { redirect_to [@album.galery, @album], notice: 'Album berhasil di update.' }
@@ -59,7 +58,8 @@ class AlbumsController < ApplicationController
 
   # DELETE /albums/1
   # DELETE /albums/1.json
-  def destroy                   
+  def destroy
+    @album = @galery.albums.find(params[:id])                   
     @album.destroy
     respond_to do |format|
       format.html { redirect_to @album.galery }
@@ -71,10 +71,7 @@ class AlbumsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
   def set_galery
       @galery = Galery.find(params[:galery_id])
-  end
-  def set_album
-      @album = @galery.albums.find(params[:id])
-  end
+  end 
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def album_params
