@@ -5,10 +5,10 @@ class Album < ActiveRecord::Base
                      :dropbox_credentials => "#{Rails.root}/config/dropbox.yml",                    
                       styles: { :medium => "300x300>"},
                      # :default_url => "/images/:style/missing.png", 
-                     :dropbox_visibility => 'public',                    
-                     :dropbox_options => {
-                           :path => proc { |style| "#{style}/#{id}_#{image.original_filename}" }
-                         }                    
+                     :dropbox_visibility => 'public'                    
+                     # :dropbox_options => {
+#                            :path => proc { |style| "#{style}/#{id}_#{image.original_filename}" }
+#                          }                   
   
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/ 
 end
