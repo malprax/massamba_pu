@@ -102,10 +102,4 @@ MassambaPu::Application.configure do
 #     :domain  => 'yourdomain.com'
 #   }
 
-# MassambaPu::Application.config.middleware.use ExceptionNotification::Rack,
-#   :email => {
-#     :email_prefix => "Massamba errors",
-#     :sender_address => %{"notifier" <notifier@dpulutra.com>},
-#     :exception_recipients => %w{kingmalprax@@gmail.com, sulfadly09@gmail.com}
-#   }
 end

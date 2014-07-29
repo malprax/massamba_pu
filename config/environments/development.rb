@@ -23,8 +23,8 @@ MassambaPu::Application.configure do
    domain:"massamba_pu.dev",
    authentication: :login,
    enable_starttls_auto: true,
-   user_name: 'kingmalprax@gmail.com',
-   password: '@1603auRIS'
+   user_name: '',
+   password: ''
   }
   config.action_mailer.perform_deliveries = true
   config.action_mailer.default :charset => "utf-8"
@@ -34,17 +34,7 @@ MassambaPu::Application.configure do
   # Raise an error on page load if there are pending migrations
   config.active_record.migration_error = :page_load
   
-  #sending email   
-     # 
-   # config.action_mailer.smtp_settings = {
-   #   address: "smtp.gmail.com",
-   #   port: 587,
-   #   domain: "dpulutra.com",
-   #   authentication: :login,
-   #   enable_starttls_auto: true,
-   #   user_name: 'kingmalprax@gmail.com',
-   #   password: '@1603auRIS'
-   # }
+ 
 
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large

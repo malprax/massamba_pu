@@ -3,8 +3,10 @@
   <div class="container">    
     <div class="row">
       <h3>Daftar Pegawai</h3>
+        
       <% if params[:edit] %>
-      <p><%= link_to 'Input Pegawai', new_daftar_pegawai_path, class: "btn btn-primary" %> </p>
+      <!-- Button trigger modal -->      
+      <p><%= link_to 'Input Pegawai', new_daftar_pegawai_path, {:remote => true, 'data-toggle' => "modal", 'data-target' => "#myModal", class: "btn btn-primary" } %> </p>
       <% end %>
 
       <table class="table">

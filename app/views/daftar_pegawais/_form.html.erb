@@ -1,37 +1,54 @@
-<%= form_for @daftar_pegawai, :html => {:honeypot => true} do |f| %>
-  <% if @daftar_pegawai.errors.any? %>
-    <div id="error_explanation">
-      <h3><%= pluralize(@daftar_pegawai.errors.count, "error") %>, dan tidak dapat menyimpan karena:</h3>
 
-      <ul>
-      <% @daftar_pegawai.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <%= form_for @daftar_pegawai, :html => {:honeypot => true} do |f| %>
+          <% if @daftar_pegawai.errors.any? %>
+            <div id="error_explanation">
+              <h3><%= pluralize(@daftar_pegawai.errors.count, "error") %>, dan tidak dapat menyimpan karena:</h3>
+
+              <ul>
+              <% @daftar_pegawai.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+          <div class="field">
+            <%= f.label :name, "Nama" %><br>
+            <%= f.text_field :name %>
+          </div>
+          <div class="field">
+            <%= f.label :nip %><br>
+            <%= f.number_field :nip %>
+          </div>
+          <div class="field">
+            <%= f.label :pangkat_id, "Golongan/Pangkat" %><br>
+            <%= f.collection_select(:pangkat_id, Pangkat.order("created_at asc"), :id, :nama_pangkat)  %>
+          </div>
+          <div class="field">
+            <%= f.label :jabatan_id %><br>
+            <%= f.collection_select(:jabatan_id, Jabatan.order("created_at asc"), :id, :nama_jabatan)  %>
+          </div>
+
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <% if action_name == 'new' %>
+            <%= f.submit "Input Pegawai", class: "btn btn-primary" %>
+          <% else %>
+            <%= f.submit "Edit Pegawai", class: "btn btn-primary" %>
+          <% end %>
+      </div>
       <% end %>
-      </ul>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name, "Nama" %><br>
-    <%= f.text_field :name %>
   </div>
-  <div class="field">
-    <%= f.label :nip %><br>
-    <%= f.number_field :nip %>
-  </div>
-  <div class="field">
-    <%= f.label :pangkat_id, "Golongan/Pangkat" %><br>    
-    <%= f.collection_select(:pangkat_id, Pangkat.order("created_at asc"), :id, :nama_pangkat)  %>
-  </div> 
-  <div class="field">
-    <%= f.label :jabatan_id %><br>
-    <%= f.collection_select(:jabatan_id, Jabatan.order("created_at asc"), :id, :nama_jabatan)  %>    
-  </div>
-  <div class="actions">
-    <% if action_name == 'new' %>
-      <%= f.submit "Input Pegawai" %>
-    <% else %>
-      <%= f.submit "Edit Pegawai" %>
-    <% end %>
-  </div>
-<% end %>
+</div>
